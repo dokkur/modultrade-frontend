@@ -47,6 +47,7 @@
 	.member {
 		position: relative;
 		display: inline-block;
+		vertical-align: top;
 		width: 320px;
 		font-size: 18px;
 		box-sizing: border-box;
@@ -69,16 +70,21 @@
 			border-radius: 100%;
 		}
 
+		.head {
+			height: 80px;
+			padding-bottom: 20px;
+		}
+
 		.name {
 			color: $dark;
 			font-size: 24px;
 			font-weight: bold;
 			line-height: 34px;
-			max-width: 175px;
+			max-width: 170px;
 		}
 
 		.position {
-			max-width: 175px;
+			max-width: 180px;
 		}
 
 		.in {
