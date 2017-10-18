@@ -1,0 +1,104 @@
+.benefits {
+	position: relative;
+	background: url(../img/gears.png) no-repeat left top $blue;
+	padding-bottom: 80px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url(../img/bg1.png) no-repeat right bottom;
+	}
+
+	.container {
+		max-width: 1280px;
+	}
+
+	.text_block	{
+		font-size: 36px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+
+	.items {
+		@extend %justify;
+		display: flex;
+	    justify-content: space-around;
+	    flex-wrap: wrap-reverse;
+	}
+
+	.item {
+		width: 400px;
+		text-align: center;
+		border-radius: 6px;
+		box-sizing: border-box;
+		padding: 20px;
+		background: rgba(26,151,213,.8);
+		box-shadow: 0 0 8px rgba(0,0,0,.3);
+
+		.ico {
+			display: inline-block;
+			width: 144px;
+			height: 144px;
+			margin-top: -92px;
+			border-radius: 100%;
+			background-color: $green;
+			background-repeat: no-repeat;
+			background-size: 120px;
+			background-position: center;
+
+			&.l {
+				background-image: url(../img/icons/token_holders.svg);
+			}
+			&.c {
+				background-image: url(../img/icons/customers.svg);
+			}
+			&.r {
+				background-image: url(../img/icons/market_places.svg);
+			}
+		}
+
+		.title	{
+			color: $dark;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 36px;
+			text-transform: uppercase;
+			margin: 40px 0;
+		}
+		.subtitle	{
+			color: $dark;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.text {
+			font-size: 30px;
+			line-height: 40px;
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.benefits {
+		.items {
+			display: block;
+		}
+		.item {
+			display: block;
+			width: auto;
+			margin-bottom: 120px;
+
+			&.last {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

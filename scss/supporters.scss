@@ -1,0 +1,115 @@
+.supporters {
+	position: relative;
+	padding-bottom: 80px;
+	text-align: center;
+
+	background: url(../img/bg5.png) no-repeat left top $dark;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		background: url(../img/bg5.png) no-repeat left top;
+		transform: scale(-1, -1);
+	}
+
+	.container {
+		max-width: 1176px;
+	}
+
+	h1 {
+		color: #fff;
+	}
+
+	.text_block {
+		font-size: 30px;
+		color: $blue;
+		font-weight: bold;
+		margin: 60px 0 40px 0;
+	}
+
+	.scroll {
+		position: relative;
+		.block {
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+		}
+		.arrow {
+			position: absolute;
+			top: 40px;
+			cursor: pointer;
+			padding: 20px;
+			stroke: #fff;
+			transition: stroke .3s;
+
+			&:hover {
+				stroke: $blue;
+			}
+
+			&:active {
+				transition: none;
+				stroke: $orange;
+			}
+
+			&.right {
+				right: -50px;
+			}
+			&.left {
+				left: -50px;
+			}
+		}
+	}
+
+	.brands {
+		width: 1000%;
+		text-align: left;
+
+		.brand {
+			display: inline-block;
+			width: 156px;
+			vertical-align: top;
+			margin-right: 95px;
+			text-decoration: none;
+			color: #fff;
+			transition: color .3s;
+
+			.logo {
+				border-radius: 6px;
+			}
+
+			.title {
+				text-align: center;
+				font-size: 16px;
+				margin-top: 10px;
+			}
+
+			&:hover {
+				color: $blue;
+			}
+			&:active {
+				transition: none;
+				color: $orange;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.supporters {
+		&:before {
+			display: none;
+		}
+		.scroll {
+			width: 160px;
+			margin: auto;
+		}
+
+		.button {
+			margin: auto;
+		}
+	}
+}

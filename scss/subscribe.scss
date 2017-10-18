@@ -1,0 +1,97 @@
+.subscribe_block {
+	padding: 100px 0;
+
+	.container {
+		max-width: 1280px;
+	}
+
+	.subscribe {
+		.email {
+			background: #f8f8f8;
+		}
+	}
+
+	.button	{
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+}
+
+.subscribe {
+	position: relative;
+	display: block;
+	width: 640px;
+
+	input {
+		display: block;
+		font-family: 'Lato', sans-serif;
+		font-size: 33px;
+		height: 72px;
+		border: 0;
+		border-radius: 6px;
+		outline: none;
+	}
+
+	.email {
+		width: 100%;
+		background: #fff;
+		padding: 0 82px 0 20px;
+		box-sizing: border-box;
+
+		&::-webkit-input-placeholder {
+			font-style: italic;
+		}
+	}
+
+	.send_btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 80px;
+		text-indent: -9999px;
+		background-image: url(../img/icons/send.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: $orange;
+		transition: background .3s;
+		cursor: pointer;
+		background-position: 20px 20px;
+
+		&:hover {
+			background-color: $blue;
+			animation: sendBtnAnimation 1s;
+		}
+		&:active {
+			transition: none;
+			background-color: $green;
+		}
+	}
+
+	@keyframes sendBtnAnimation {
+		0% { background-position: 20px 20px; }
+		40% { background-position: 70px -40px; }
+		40.1% { background-position: -40px -40px; }
+		40.2% { background-position: -40px 70px; }
+		100% { background-position: 20px 20px; }
+	}
+}
+
+@media (max-width: $tablet) {
+	.subscribe_block {
+		.button	{
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-top: 40px;
+		}
+	}
+
+	.subscribe {
+		width: 100%;
+
+		input {
+			font-size: 14px;
+		}
+	}
+}

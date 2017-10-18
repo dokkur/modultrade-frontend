@@ -1,0 +1,145 @@
+.roadmap {
+	position: relative;
+	background: url(../img/bg6.png) no-repeat top;
+	background-size: 100%;
+	padding-bottom: 300px;
+
+	.container {
+		position: relative;
+		width: 1116px;
+		margin: auto;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: url(../img/bg3.png) no-repeat bottom;
+		background-size: 100%;
+	}
+
+	.cheme {
+		width: 100%;
+		//position: relative;
+		//height: 638px;
+		//background: url(../img/roadmap.png) no-repeat center;
+		//background-size: 100%;
+		margin: 40px auto 0 auto;
+	}
+
+	.numbers {
+		@extend %justify;
+
+		.triangle {
+			
+		}
+	}
+
+	.number {
+		position: relative;
+		width: 320px;
+		text-align: center;
+		background: #fff;
+		box-shadow: 0 0 8px rgba(0,0,0,.3);
+		padding: 36px;
+		box-sizing: border-box;
+		border-radius: 6px;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 104%;
+			height: 100%;
+			bottom: -3%;
+			left: -2%;
+			background: linear-gradient(to top, #fff 30%, rgba(255,255,255,0));
+		}
+
+		&.bottom {
+			&:before {
+				top: -4%;
+				background: linear-gradient(to bottom, #fff 30%, rgba(255,255,255,0));
+			}
+		}
+
+		.icon {
+			position: relative;
+
+			.user {
+				position: absolute;
+				left: 50%;
+				margin-left: -25px;
+				bottom: -20px;
+			}
+		}
+
+		.value {
+			position: relative;
+			font-size: 36px;
+			font-weight: bold;
+			color: $blue;
+			margin-top: 30px;
+		}
+
+		.more {
+			position: absolute;
+			width: 100%;
+			color: #cdd0da;
+			left: 0;
+			bottom: -30px;
+		}
+
+		.ball {
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			border: 1px solid #cdd0da;
+			border-radius: 100%;
+			background: #fff;
+			top: 246px;
+
+			&.right {
+				right: -8px;
+			}
+			&.left {
+				left: -8px;
+			}
+		}
+	}
+
+	.triangle {
+		height: 260px;
+		width: 14px;
+		background: url(../img/icons/triangle.svg) no-repeat center bottom;
+	}
+}
+
+@media (max-width: $tablet) {
+	.roadmap {
+		padding-bottom: 0;
+		.cheme {
+			margin-top: 0;
+		}
+
+		.number {
+			width: auto;
+			display: block;
+			margin-bottom: 40px;
+
+			.ball {
+				display: none;
+			}
+
+			.more {
+				bottom: 10px;
+			}
+		}
+		.triangle {
+			display: none;
+		}
+	}
+}

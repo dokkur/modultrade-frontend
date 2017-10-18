@@ -1,0 +1,156 @@
+.participate {
+	text-align: center;
+	padding-bottom: 120px;
+	background: url(../img/gears_top.png) no-repeat left bottom;
+
+	.container {
+		max-width: 1116px;
+	}
+
+	h2 {
+		font-size: 36px;
+		line-height: 46px;
+		color: $blue;
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 28px;
+		color: $dark;
+		margin: 20px 0 20px 0;
+		text-transform: uppercase;
+	}
+
+	.products {
+		@extend %justify;
+	}
+
+	.product {
+		width: 320px;
+		text-align: center;
+		text-decoration: none;
+		color: $dark;
+		box-sizing: border-box;
+		padding: 20px;
+		transition: all .3s;
+		border-radius: 6px;
+
+		/* &:hover {
+			box-shadow: 0 0 8px rgba(0,0,0,.3);
+			.ico {
+				transform: scale(1.1);
+			}
+			.more {
+				color: $blue;
+			}
+		}
+
+		&:active {
+			transition: none;
+			background: #cdd0da;
+			box-shadow: inset 0 0 8px rgba(0,0,0,.3);
+		} */
+
+		h3 {
+			margin-bottom: 0;
+		}
+
+		.ico {
+			transition: transform .3s;
+		}
+
+		.description {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		.more {
+			color: #cdd0da;
+		}
+	}
+
+
+	.mtrc {
+		position: relative;
+		text-align: justify;
+		box-shadow: 0 -2px 8px rgba(0,0,0,.4);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 104%;
+			height: 70%;
+			bottom: -2%;
+			left: -2%;
+			background: linear-gradient(to top, #fff 20%, rgba(255,255,255,0));
+		}
+
+		&:after {
+			content: "";
+			width: 100%;
+			visibility: hidden;
+			display: inline-block;
+		}
+
+		.item {
+			position: relative;
+			text-align: center;
+			width: 320px;
+			box-sizing: border-box;
+			padding: 0 20px;
+			display: inline-block;
+			vertical-align: top;
+
+			&.middle {
+				border-left: 1px dashed #e8e8e8;
+				border-right: 1px dashed #e8e8e8;
+				width: 450px;
+			}
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+		.description {
+			font-size: 28px;
+			font-weight: bold;
+			color: $green;
+			text-transform: uppercase;
+			margin-top: 20px;
+		}
+
+		.bar {
+			height: 10px;
+			background: $blue;
+			margin-bottom: 20px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.participate {
+		.product {
+			display: block;
+			width: auto;
+		}
+		.mtrc {
+			.item {
+				display: block;
+				width: auto;
+				margin-bottom: 80px;
+
+				&.middle {
+					border: none;
+					width: auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,135 @@
+$dark: #071545;
+$green: #69cd51;
+$blue: #1a97d5;
+$orange: #ffaa01;
+
+$tablet: 1120px;
+
+%justify {
+	text-align: justify;
+
+	& > * {
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		visibility: hidden;
+		display: inline-block;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	background: #fff;
+}
+
+h1 {
+	position: relative;
+	font-size: 48px;
+	line-height: 58px;
+	color: $dark;
+	text-align: center;
+	padding: 40px;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	padding: 0 20px;
+	margin: auto;
+}
+
+.button {
+	display: inline-block;
+	min-width: 320px;
+	padding: 20px 60px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 50px;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	transition: all .3s;
+	cursor: pointer;
+
+	&:hover {
+		background: $blue !important;
+		border-color: $blue !important;
+	}
+
+	&:active {
+		transition: none;
+		background: $orange !important;
+		border-color: transparent !important;
+	}
+	
+	&.frame {
+		border-color: #fff;
+	}
+
+	&.green {
+		background: $green;
+	}
+
+	&.orange {
+		background: $orange;
+	}
+}
+
+.small_btn {
+	display: inline-block;
+	font-size: 18px;
+	height: 28px;
+	line-height: 28px;
+	background: $green;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 20px;
+	padding: 0 12px;
+	vertical-align: middle;
+	transition: all .3s;
+
+	&:hover {
+		background: $blue;
+	}
+
+	&:active {
+		background: $orange;
+		transition: none;
+	}
+}
+
+
+
+
+@media (max-width: $tablet) {
+	.container {
+		width: auto !important;
+	}
+
+	.button {
+		display: block !important;
+		font-size: 18px;
+		max-width: 320px;
+		min-width: auto;
+		padding: 10px 20px;
+	}
+
+	h1 {
+		font-size: 28px;
+		line-height: 38px;
+		padding: 40px 0;
+	}
+}

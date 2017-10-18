@@ -1,0 +1,112 @@
+.footer {
+	position: relative;
+	padding: 35px 0 20px 0;
+
+	background: url(../img/bg5.png) no-repeat left top $dark;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		background: url(../img/bg5.png) no-repeat left top;
+		transform: scale(-1, -1);
+	}
+
+	.container {
+		position: relative;
+		max-width: 1280px;
+		margin: auto;
+
+		&:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+
+	.block_1 {
+		width: 300px;
+		float: left;
+	}
+
+	.block_2 {
+		width: 640px;
+		float: right;
+	}
+
+	.logo {
+		width: 246px;
+	}
+
+	.modultrade_btn {
+		margin: 40px 0;
+	}
+
+	.link {
+		width: 100px;
+		display: block;
+		font-size: 18px;
+		color: #fff;
+		text-decoration: none;
+		margin-bottom: 20px;
+		transition: color .3s;
+
+		&:hover {
+			text-decoration: underline;
+			color: $blue;
+		}
+
+		&:active {
+			transition: none;
+			color: $orange;
+		}
+	}
+
+	.contacts {
+		color: #fff;
+		font-size: 18px;
+		margin-top: 60px;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+			&:active {
+				color: $orange;
+			}
+		}
+	}
+
+	.info {
+		font-size: 16px;
+		color: $blue;
+		margin-top: 22px;
+	}
+}
+
+@media (max-width: $tablet) {
+	.footer {
+		&:before {
+			display: none;
+		}
+
+		.block_1, .block_2 {
+			width: auto;
+			float: none;
+		}
+
+		.block_1 {
+			padding-bottom: 10px;
+		}
+
+		.contacts {
+			margin-top: 20px;	
+		}
+	}
+}

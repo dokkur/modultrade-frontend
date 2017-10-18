@@ -1,0 +1,81 @@
+.howitworks {
+	position: relative;
+	height: 450px;
+	background: url(../img/howitworks.jpg) no-repeat center #577494;
+	background-size: cover;
+
+	.play {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		background: rgba(7,21,69,.5);
+		transition: background .3s;
+
+		&:hover {
+			background: rgba(7,21,69,.3);
+
+			.btn {
+				transform: scale(1.3);
+				background: $blue;
+			}
+		}
+
+		&:active {
+			background: rgba(255,255,255,.3);
+			transition: none;
+
+			.btn {
+				transition: none;
+				background: $orange;
+			}
+		}
+
+		.btn {
+			position: absolute;
+			width: 82px;
+			height: 82px;
+			background: $green;
+			border-radius: 100%;
+			left: 50%;
+			top: 50%;
+			margin: -41px 0 0 -41px;
+			transition: all .3s;
+
+			.arrow {
+				position: absolute;
+				width: 35px;
+				height: 50px;
+				top: 16px;
+				left: 29px;
+				background: url(../img/icons/play.svg) no-repeat center;
+				background-size: cover;
+			}
+		}
+
+		.text {
+			position: absolute;
+			width: 100%;
+			bottom: 60px;
+			font-size: 48px;
+			text-align: center;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.howitworks {
+		height: 400px;
+		background-size: 140%;
+		background-position: center top;
+		
+		.play {
+			.text {
+				bottom: 20px;
+			}
+		}
+	}
+}

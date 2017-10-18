@@ -1,0 +1,136 @@
+.team {
+	position: relative;
+	background: url(../img/bg2.png) no-repeat top;
+	background-size: 100%;
+	padding-bottom: 100px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: url(../img/bg3.png) no-repeat bottom;
+		background-size: 100%;
+	}
+
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background: url(../img/bg4.png) no-repeat left center;
+		background-size: 40%;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			background: url(../img/bg4.png) no-repeat left center;
+			transform: scaleX(-1);
+			background-size: 40%;
+		}
+	}
+
+	.container {
+		width: 1208px;
+	}
+
+	.members {
+		
+	}
+
+	.member {
+		position: relative;
+		display: inline-block;
+		width: 320px;
+		font-size: 18px;
+		box-sizing: border-box;
+		border-radius: 6px;
+		padding: 30px;
+		transition: box-shadow .3s;
+		background: rgba(255,255,255,.9);
+		margin: 0 40px 8px 40px;
+
+		&:hover {
+			box-shadow: 0 0 8px rgba(0,0,0,.3);
+		}
+
+		.photo {
+			position: absolute;
+			width: 85px;
+			height: 85px;
+			right: 30px;
+			top: 30px;
+			border-radius: 100%;
+		}
+
+		.name {
+			color: $dark;
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 34px;
+			max-width: 175px;
+		}
+
+		.position {
+			max-width: 175px;
+		}
+
+		.in {
+			display: block;
+			width: 24px;
+			height: 24px;
+			background: $green;
+			border-radius: 100%;
+			text-align: center;
+			text-decoration: none;
+			margin: 40px 0 20px 0;
+			transition: all .3s;
+
+			color: #fff;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: bold;
+
+			&:hover {
+				background: $blue;
+			}
+
+			&:active {
+				transition: none;
+				background: $orange;
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.team {
+		.bg {
+			background-size: auto;
+
+			&:before {
+				display: none;
+			}
+		}
+		.container {
+			padding: 0;
+		}
+		.member {
+			display: block;
+			width: auto;
+			padding: 20px;
+			margin: 0 0 8px 0;
+
+			.photo {
+				top: 20px;
+				right: 20px;
+			}
+		}
+	}
+}
