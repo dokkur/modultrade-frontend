@@ -21,13 +21,93 @@
 		background-size: 100%;
 	}
 
-	.cheme {
-		width: 100%;
-		//position: relative;
-		//height: 638px;
-		//background: url(../img/roadmap.png) no-repeat center;
-		//background-size: 100%;
+	.scheme {
 		margin: 40px auto 0 auto;
+
+		.img {
+			width: 100%;
+		}
+
+		.b {
+			position: absolute;
+			width: 70px;
+			height: 70px;
+
+			&:hover .info {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&.r .info {
+				right: 100%;
+				top: 0;
+				bottom: auto;
+			}
+		}
+
+		.b1 {
+			top: 529px;
+			left: 19px;
+			
+		}
+		.b2 {
+			top: 484px;
+			left: 134px;
+		}
+		.b3 {
+			top: 432px;
+			left: 255px;
+		}
+		.b4 {
+			top: 440px;
+			left: 378px;
+		}
+		.b5 {
+			top: 432px;
+			left: 500px;
+		}
+		.b6 {
+			top: 440px;
+			left: 637px;
+		}
+		.b7 {
+			top: 432px;
+			left: 780px;
+		}
+		.b8 {
+			top: 340px;
+			left: 848px;
+		}
+		.b9 {
+			top: 252px;
+			left: 950px;
+		}
+		.b10 {
+			top: 181px;
+			left: 1080px;
+		}
+		.b11 {
+			top: 378px;
+			left: 926px;
+		}
+		.b12 {
+			top: 338px;
+			left: 1040px;
+		}
+
+		.info {
+			pointer-events: none;
+			position: absolute;
+			width: 230px;
+			padding: 20px;
+			bottom: 100%;
+			border: 2px solid $blue;
+			background: #fff;
+			transition: all .3s;
+			opacity: 0;
+			visibility: hidden;
+			box-shadow: 0 2px 8px rgba(0,0,0,.3);
+		}
 	}
 
 	.numbers {
@@ -121,8 +201,12 @@
 @media (max-width: $tablet) {
 	.roadmap {
 		padding-bottom: 0;
-		.cheme {
+		.scheme {
 			margin-top: 0;
+
+			.b {
+				display: none;
+			}
 		}
 
 		.number {

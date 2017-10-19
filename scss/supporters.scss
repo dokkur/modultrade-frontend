@@ -34,9 +34,11 @@
 	.scroll {
 		position: relative;
 		.block {
+			position: relative;
 			width: 100%;
 			height: 200px;
 			overflow: hidden;
+			border-radius: 6px;
 		}
 		.arrow {
 			position: absolute;
@@ -44,7 +46,15 @@
 			cursor: pointer;
 			padding: 20px;
 			stroke: #fff;
-			transition: stroke .3s;
+			fill: none;
+			transition: all .3s;
+			display: none;
+			visibility: hidden;
+
+			&.hide {
+				visibility: hidden;
+				opacity: 0;
+			}
 
 			&:hover {
 				stroke: $blue;
@@ -65,14 +75,17 @@
 	}
 
 	.brands {
+		position: absolute;
+		left: 0;
 		width: 1000%;
 		text-align: left;
+		transition: left .3s;
 
 		.brand {
-			display: inline-block;
+			float: left;
 			width: 156px;
 			vertical-align: top;
-			margin-right: 95px;
+			margin-right: 98px;
 			text-decoration: none;
 			color: #fff;
 			transition: color .3s;
@@ -106,6 +119,11 @@
 		.scroll {
 			width: 160px;
 			margin: auto;
+
+			.arrow {
+				display: block;
+				visibility: visible;
+			}
 		}
 
 		.button {

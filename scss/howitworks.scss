@@ -1,7 +1,7 @@
 .howitworks {
 	position: relative;
 	height: 500px;
-	background: url(../img/howitworks.jpg) no-repeat center #577494;
+	background: url(../img/howitworks.jpg) no-repeat center $dark;
 	background-size: cover;
 
 	.play {
@@ -10,7 +10,7 @@
 		height: 100%;
 		top: 0;
 		cursor: pointer;
-		background: rgba(7,21,69,.7);
+		background: rgba(7,21,69,.5);
 		transition: background .3s;
 
 		&:hover {
