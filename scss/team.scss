@@ -137,6 +137,22 @@
 				top: 20px;
 				right: 20px;
 			}
+
+			.info {
+				display: none;
+			}
+			.in {
+				display: none;
+			}
+
+			&:hover {
+				.in {
+					display: block;
+				}
+				.info {
+					display: block;
+				}
+			}
 		}
 	}
 }
