@@ -71,15 +71,15 @@
 		}
 
 		.head {
-			height: 80px;
-			padding-bottom: 20px;
+			height: 120px;
 		}
 
 		.name {
 			color: $dark;
 			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 6px;
 			font-weight: bold;
-			line-height: 34px;
 			max-width: 170px;
 		}
 
@@ -95,7 +95,6 @@
 			border-radius: 100%;
 			text-align: center;
 			text-decoration: none;
-			margin: 40px 0 20px 0;
 			transition: all .3s;
 
 			color: #fff;
@@ -112,17 +111,17 @@
 				background: $orange;
 			}
 		}
+
+		.info {
+			margin-top: 10px;
+		}
 	}
 }
 
 @media (max-width: $tablet) {
 	.team {
 		.bg {
-			background-size: auto;
-
-			&:before {
-				display: none;
-			}
+			display: none;
 		}
 		.container {
 			padding: 0;
