@@ -8,14 +8,15 @@
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/createjs-2015.11.26.min.js"></script>
 	<script src="js/script.js"></script>
 </head>
 <body>
-	<div class="main">
+	<div class="main hide">
 		<video class="video_bg" preload="auto" autoplay loop>
 			<source src="video/bg.mp4" type="video/mp4"> 
 		</video>
-		<div class="fade"></div>
+		<!-- <div class="fade"></div> -->
 		<div class="container">
 			<div class="header">
 				<div class="hamburger">
@@ -24,19 +25,19 @@
 					<div class="s3"></div>
 				</div>
 				<div class="soc">
-					<a class="tel" href="#" target="_blank">
+					<a class="tel delay" href="#" target="_blank">
 						<span class="btn_bg"></span>
 						<span class="txt">Join us</span>
 					</a>
-					<a class="soc_btn in" href="#" target="_blank"></a>
-					<a class="soc_btn m" href="#" target="_blank"></a>
-					<a class="soc_btn f" href="#" target="_blank"></a>
-					<a class="soc_btn t" href="#" target="_blank"></a>
-					<a class="soc_btn r" href="#" target="_blank"></a>
-					<a class="soc_btn b" href="#" target="_blank"></a>
+					<a class="soc_btn hide in delay" href="#" target="_blank"></a>
+					<a class="soc_btn m delay" href="#" target="_blank"></a>
+					<a class="soc_btn f delay" href="#" target="_blank"></a>
+					<a class="soc_btn t delay" href="#" target="_blank"></a>
+					<a class="soc_btn r delay" href="#" target="_blank"></a>
+					<a class="soc_btn b delay" href="#" target="_blank"></a>
 				</div>
-				<a class="small_btn" href="https://modultrade.com/" target="_blank">modultrade.com</a>
-				<div class="right_block">
+				<a class="small_btn modultrade_btn delay" href="https://modultrade.com/" target="_blank">modultrade.com</a>
+				<div class="right_block delay05">
 					<div class="enter">
 						<a class="login" href="#">Login</a>
 						<span>|</span>
@@ -55,57 +56,70 @@
 			
 			<img class="logo" src="img/modultrade_logo.svg" alt="ModulTrade">
 
-			<a href="https://icobench.com/ico/modultrade" target="_blank"><img class="rated" src="img/rated.png" alt=""></a>
+			<a class="rated delay1" href="https://icobench.com/ico/modultrade" target="_blank" rel="nofollow" title="ModulTrade on ICObench">
+				<img border="0" src="https://icobench.com/rated/modultrade?shape=square&amp;size=s" width="100px" height="100px" alt="ModulTrade ICO rating">
+			</a>
 
-			<div class="text_block">
+			<div class="text_block delay05">
 				<span class="blue">Democratizing global trade</span> with blockchain technology
 			</div>
 
 			<div class="discount">40% Discount Ends in 3 weeks</div>
 
 			<div class="buttons">
-				<a class="button frame" href="#">Try MVP</a>
-				<a class="button green" href="#">Participate in Pre-Sale</a>
-				<a class="button frame" href="#">download WP</a>
+				<a class="button frame delay delay3" href="#">Try MVP</a>
+				<a class="button green delay delay35" href="#">Participate in Pre-Sale</a>
+				<a class="button frame delay delay4" href="#">download WP</a>
 			</div>
 		</div>
 	</div>
-	<div class="howitworks">
-		<div class="play">
-			<div class="btn"><div class="arrow"></div></div>
-			<div class="text">How it works</div>
-		</div>
-	</div>
-	<div class="participate">
+	<div class="participate hide">
 		<div class="container">
 			<h1>Be a part of this revolutionary change<br>in how we trade around the world</h1>
 			
 			<div class="products">
 				<div class="product">
 					<h2>Application</h2>
-					<img class="ico" src="img/icons/application.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/application_b.svg" alt="">
+						<img class="ico_f" src="img/icons/application.svg" alt="">
+					</div>
 					<h3>For small enterprises</h3>
 					<div class="description">an ecosystem that gives an opportunity to trade globally</div>
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
 				<div class="product">
 					<h2>Plug-in button</h2>
-					<img class="ico" src="img/icons/plugin_button.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/plugin_button_b.svg" alt="">
+						<img class="ico_f" src="img/icons/plugin_button.svg" alt="">
+					</div>
 					<h3>For Marketplaces Retailers</h3>
 					<div class="description">a customer service for international trade in one plug-in button</div>
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
 				<div class="product">
 					<h2>Platform</h2>
-					<img class="ico" src="img/icons/platform.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/platform_b.svg" alt="">
+						<img class="ico_f" src="img/icons/platform.svg" alt="">
+					</div>
 					<h3>For trade services Providers</h3>
 					<div class="description">a platform for direct collaboration with trade participants</div>
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
 			</div>
 
+			<div class="howitworks">
+				<div class="play">
+					<div class="btn"><div class="arrow"></div></div>
+					<div class="text">How it works</div>
+				</div>
+			</div>
+
 			<h1>We fix all hassle and risks for small businesses<br>in a global trade just for 1% fee</h1>
 			<h2>MTRc is</h2>
+
 
 			<div class="mtrc">
 				<div class="bar"></div>
@@ -131,6 +145,7 @@
 			<div class="button orange">Participate in Pre-Sale</div>
 		</div>
 	</div>
+
 	<div class="benefits">
 		<div class="container">
 			<h1>PROJECT BENEFITS AND OPPORTUNITIES</h1>
@@ -426,7 +441,8 @@
 		<div class="container">
 			<h1>ROADMAP</h1>
 			<div class="scheme">
-				<img class="img" src="img/roadmap.png" alt="">
+				<!-- <img class="img" src="img/roadmap.png" alt=""> -->
+				<canvas class="img" id="roadmap" width="1122" height="650"></canvas>
 				
 				<div class="b b1"></div>
 				<div class="b b2">
@@ -447,20 +463,25 @@
 				<div class="b b7">
 					<div class="info">Trade participants receives end to end service to execute trades easily and efficiently. Logistics, insurance, tax, bookkeeping services onboarded.</div>
 				</div>
+
 				<div class="b r b8">
-					<div class="info">Users can execute cross- border trade in ModulTrade ecosystem. Platform operates in UK, Italy, Germany. Trade participants receives end to end service to execut</div>
+					<div class="info">Users can execute cross-border trade in ModulTrade ecosystem. Platform operates in UK, Italy, Germany. Trade participants receives end to end service to execut</div>
 				</div>
+
 				<div class="b r b9">
-					<div class="info">Achieved a critical mass of users that creates a network effect in ModulTrade ecosystem. Users can execu</div>
-				</div>
-				<div class="b r b10">
-					<div class="info">Global cover.</div>
-				</div>
-				<div class="b r b11">
 					<div class="info">Users on the base of Reputational capital can get financing to facilitate the trade.</div>
 				</div>
-				<div class="b r b12">
+
+				<div class="b r b10">
+					<div class="info">Achieved a critical mass of users that creates a network effect in ModulTrade ecosystem. Users can execu</div>
+				</div>
+
+				<div class="b r b11">
 					<div class="info">Users receive access to reliable counterparties and global choice at optimal price.</div>
+				</div>
+
+				<div class="b r b12">
+					<div class="info">Global cover.</div>
 				</div>
 			</div>
 			<h1>Number of users increase</h1>

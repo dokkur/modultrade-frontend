@@ -36,6 +36,7 @@
 			&:hover .info {
 				opacity: 1;
 				visibility: visible;
+				transform: translateY(0);
 			}
 
 			&.r .info {
@@ -78,19 +79,19 @@
 			top: 340px;
 			left: 848px;
 		}
-		.b9 {
+		.b10 {
 			top: 252px;
 			left: 950px;
 		}
-		.b10 {
+		.b12 {
 			top: 181px;
 			left: 1080px;
 		}
-		.b11 {
+		.b9 {
 			top: 378px;
 			left: 926px;
 		}
-		.b12 {
+		.b11 {
 			top: 338px;
 			left: 1040px;
 		}
@@ -103,10 +104,11 @@
 			bottom: 100%;
 			border: 2px solid $blue;
 			background: #fff;
-			transition: all .3s;
+			transition: all .5s;
 			opacity: 0;
 			visibility: hidden;
 			box-shadow: 0 2px 8px rgba(0,0,0,.3);
+			transform: translateY(20px);
 		}
 	}
 
