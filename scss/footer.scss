@@ -39,10 +39,16 @@
 
 	.logo {
 		width: 246px;
+		transition: all 1s;
 	}
 
 	.modultrade_btn {
 		margin: 40px 0;
+		transition: transform 1s, opacity 1s;
+
+		&.delay {
+			transition-delay: .6s;
+		}
 	}
 
 	.link {
@@ -52,7 +58,7 @@
 		color: #fff;
 		text-decoration: none;
 		margin-bottom: 20px;
-		transition: color .3s;
+		transition: all .3s;
 
 		&:hover {
 			text-decoration: underline;
@@ -69,6 +75,7 @@
 		color: #fff;
 		font-size: 18px;
 		margin-top: 60px;
+		transition: opacity 1s;
 
 		a {
 			color: #fff;
@@ -87,6 +94,39 @@
 		font-size: 16px;
 		color: $blue;
 		margin-top: 22px;
+		transition: opacity 1s;
+	}
+
+	&.hide {
+		.logo {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+
+		.link {
+			opacity: 0;
+		}
+
+		.soc {
+			.tel {
+				transform: scale(0);
+			}
+			.soc_btn {
+				transform: scale(0);
+			}
+		}
+
+		.modultrade_btn {
+			transform: translateY(-20px);
+			opacity: 0;
+		}
+
+		.contacts {
+			opacity: 0;
+		}
+		.info {
+			opacity: 0;
+		}
 	}
 }
 

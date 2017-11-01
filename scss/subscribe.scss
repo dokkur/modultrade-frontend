@@ -1,8 +1,15 @@
 .subscribe_block {
 	padding: 100px 0;
 
+	&.hide {
+		.container {
+			opacity: 0;
+		}
+	}
+
 	.container {
 		max-width: 1280px;
+		transition: opacity 1s;
 	}
 
 	.subscribe {
