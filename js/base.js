@@ -1,5 +1,6 @@
 $(function() {
 	main();
+	participate();
 	howitworks();
 	team();
 	supporters();

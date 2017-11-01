@@ -120,6 +120,16 @@
 		}
 	}
 
+	.hide {
+		.number {
+			opacity: 0;
+			transform: scale(.5);
+		}
+		.triangle {
+			opacity: 0;
+		}
+	}
+
 	.number {
 		position: relative;
 		width: 320px;
@@ -129,6 +139,7 @@
 		padding: 36px;
 		box-sizing: border-box;
 		border-radius: 6px;
+		transition: all .5s;
 
 		&:before {
 			content: "";
@@ -150,6 +161,7 @@
 
 		.icon {
 			position: relative;
+			height: 160px;
 
 			.user {
 				position: absolute;
@@ -197,6 +209,8 @@
 		height: 260px;
 		width: 14px;
 		background: url(../img/icons/triangle.svg) no-repeat center bottom;
+		transition: opacity 1s;
+		transition-delay: 1s;
 	}
 }
 

@@ -6,10 +6,10 @@
 	<link href="favicon.ico" rel="icon">
 	<meta name="format-detection" content="telephone=no">
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="css/style.css?v2" type="text/css" rel="stylesheet">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/createjs-2015.11.26.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/script.js?v2"></script>
 </head>
 <body>
 	<div class="main hide">
@@ -78,7 +78,7 @@
 			<h1>Be a part of this revolutionary change<br>in how we trade around the world</h1>
 			
 			<div class="products">
-				<div class="product">
+				<div class="product hide delay05">
 					<h2>Application</h2>
 					<div class="ico">
 						<img class="ico_b" src="img/icons/application_b.svg" alt="">
@@ -88,7 +88,7 @@
 					<div class="description">an ecosystem that gives an opportunity to trade globally</div>
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
-				<div class="product">
+				<div class="product hide delay1">
 					<h2>Plug-in button</h2>
 					<div class="ico">
 						<img class="ico_b" src="img/icons/plugin_button_b.svg" alt="">
@@ -98,7 +98,7 @@
 					<div class="description">a customer service for international trade in one plug-in button</div>
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
-				<div class="product">
+				<div class="product hide delay15">
 					<h2>Platform</h2>
 					<div class="ico">
 						<img class="ico_b" src="img/icons/platform_b.svg" alt="">
@@ -109,33 +109,46 @@
 					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
 				</div>
 			</div>
+		</div>
+	</div>
 
-			<div class="howitworks">
-				<div class="play">
-					<div class="btn"><div class="arrow"></div></div>
-					<div class="text">How it works</div>
-				</div>
-			</div>
+	<div class="howitworks hide">
+		<div class="play">
+			<div class="btn"><div class="arrow"></div></div>
+			<div class="text">How it works</div>
+		</div>
+	</div>
 
+	<div class="mtrc hide">
+		<div class="container">
 			<h1>We fix all hassle and risks for small businesses<br>in a global trade just for 1% fee</h1>
 			<h2>MTRc is</h2>
-
-
-			<div class="mtrc">
+			
+			<div class="mtrc_block">
 				<div class="bar"></div>
-				<div class="item">
+				<div class="item hide">
 					<h3>Value</h3>
-					<img class="ico" src="img/icons/money.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+						<img class="ico_m" src="img/icons/money.svg" alt="">
+						<img class="ico_f" src="img/icons/money_b.svg" alt="">
+					</div>
 					<div class="description">0% сredit</div>
 				</div>
-				<div class="item middle">
+				<div class="item middle hide">
 					<h3>Safety</h3>
-					<img class="ico" src="img/icons/safety.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+						<img class="ico_f" src="img/icons/safety.svg" alt="">
+					</div>
 					<div class="description">secure smart-contract payment</div>
 				</div>
-				<div class="item">
+				<div class="item hide">
 					<h3>Service</h3>
-					<img class="ico" src="img/icons/service.svg" alt="">
+					<div class="ico">
+						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+						<img class="ico_f" src="img/icons/service.svg" alt="">
+					</div>
 					<div class="description">1% for end-to-end trade services</div>
 				</div>
 			</div>
@@ -146,13 +159,14 @@
 		</div>
 	</div>
 
-	<div class="benefits">
+
+	<div class="benefits hide">
 		<div class="container">
 			<h1>PROJECT BENEFITS AND OPPORTUNITIES</h1>
 			<div class="text_block">Every trade served on ModulTrade platform requires MTRc</div>
 
 			<div class="items">
-				<div class="item">
+				<div class="item delay05">
 					<div class="ico l"></div>
 					<div class="title">Token Holders</div>
 					<div class="subtitle">MTRc valuation<br>increase</div>
@@ -161,7 +175,7 @@
 					<div class="subtitle">Trade Guarantee &amp; Financing for ModulTrade customers</div>
 					<div class="text">Every token holder will be able to provide MTRc for a fee to finance the trade on the platform. Potential amount and fee will be calculated on the basis of customers’ Reputation</div>
 				</div>
-				<div class="item">
+				<div class="item delay1">
 					<div class="ico c"></div>
 					<div class="title">Customers</div>
 					<div class="subtitle">Secure mechanism for payment &amp; delivery at 1%</div>
@@ -173,7 +187,7 @@
 					<div class="subtitle">End-to-end trade services</div>
 					<div class="text">which eases the trade (logistics, insurance, tax, etc)</div>
 				</div>
-				<div class="item last">
+				<div class="item last delay15">
 					<div class="ico r"></div>
 					<div class="title">Market places</div>
 					<div class="subtitle">Increase of sales and direct access to customers</div>
@@ -182,12 +196,13 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="team">
 		<div class="bg"></div>
 		<div class="container">
-			<h1>OUR TEAM</h1>
-			<div class="members">
-				<div class="member">
+			<div class="members team_members hide">
+				<h1>OUR TEAM</h1>
+				<div class="member hide">
 					<img class="photo" src="img/team/EvgenyKaplin.jpg" alt="Evgeny Kaplin">
 					<div class="head">
 						<div class="name">Evgeny Kaplin</div>
@@ -197,7 +212,7 @@
 					<div class="info">17+ years in International Trade and Banking business with Strategic consulting experience. Successfully launched and ran a global trade finance platform in one of the top Europe bank. McKinsey, Sberbank, Cargill, Gazprom</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/JeanChaanine.jpg" alt="Jean Chaanine">
 					<div class="head">
 						<div class="name">Jean Chaanine</div>
@@ -207,7 +222,7 @@
 					<div class="info">25+ years in technology senior management on operational and strategic levels in multinational services and banking sectors. SODEXO, Crédit Agricole CIB, Société Générale, Banque de France, Saint Gobain, Ciments Français</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/KarthikeyanKaliyaperumal.jpg" alt="Karthikeyan Kaliyaperumal">
 					<div class="head">
 						<div class="name">Karthikeyan Kaliyaperumal</div>
@@ -217,7 +232,7 @@
 					<div class="info">20+ years experience in US business of Technology Strategy and Product Management in global fortune 500 companies building supply chain, financial and Marketing pla tforms for Nielsen, CBOE, Acxiom etc</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/FedorSapronov.jpg" alt="Fedor Sapronov">
 					<div class="head">
 						<div class="name">Fedor Sapronov</div>
@@ -227,7 +242,7 @@
 					<div class="info">17 years in corporate banking and investments with deep experience in Lending, Project &amp; Structured finance. Executive positions in top banking institutions - Sberbank, Alfa-bank, Gazprombank.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/MarcoRosso.jpg" alt="Marco Rosso">
 					<div class="head">
 						<div class="name">Marco Rosso</div>
@@ -237,7 +252,7 @@
 					<div class="info">18+ years in the EMEA financial services with deep risk management and structured finance experience. Positions in advisory Ernst&amp;Young, Reuters&nbsp;— and banking institutions.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/VitalyPykhtin.jpg" alt="Vitaly Pykhtin">
 					<div class="head">
 						<div class="name">Vitaly Pykhtin</div>
@@ -247,7 +262,7 @@
 					<div class="info">15+ years of experience across banking industry. Successful launch and management of retail and wholesale lending platforms at BNP Paribas. International markets exposure in transaction banking.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/DmitryShipilov.jpg" alt="Dmitry Shipilov">
 					<div class="head">
 						<div class="name">Dmitry Shipilov</div>
@@ -256,7 +271,7 @@
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">12+ years in IT solution development, architecture, technology consulting and business analysis.</div>
 				</div>
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/ArtemRadchenko.jpg" alt="Artem Radchenko">
 					<div class="head">
 						<div class="name">Artem Radchenko</div>
@@ -265,7 +280,7 @@
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">12+ years experience in the different fields of Product Design, UX design for different electronic marketplaces and services.</div>
 				</div>
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/OlyaKolomoets.jpg" alt="Olya Kolomoets">
 					<div class="head">
 						<div class="name">Olya Kolomoets</div>
@@ -274,7 +289,7 @@
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Highly skilled project and program manager with experience leading projects across multiple industries.</div>
 				</div>
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/AlexeyKosinski.jpg" alt="Alexey Kosinski">
 					<div class="head">
 						<div class="name">Alexey Kosinski</div>
@@ -283,7 +298,7 @@
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Experienced full-stack developer with a focus on building new products and decentralized systems powered by Blockchain technology.</div>
 				</div>
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/VolodymyrZinchenko.jpg" alt="Volodymyr Zinchenko">
 					<div class="head">
 						<div class="name">Volodymyr Zinchenko</div>
@@ -294,66 +309,66 @@
 				</div>
 			</div>
 
-			<h1>ADVISORS</h1>
-			<div class="members">
+			<div class="members advisors_members hide">
+				<h1>ADVISORS</h1>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/BernardLietaer.jpg" alt="Bernard Lietaer">
 					<div class="head"><div class="name">BERNARD LIETAER</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Bernard, author of The Future of Money is an international expert in the design and implementation of currency systems. He co-designed and implemented the convergence mechanism to the single European currency system (the Euro) and served as president of the Electronic Payment System.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/RichardSchwenke.png" alt="Richard Schwenke">
 					<div class="head"><div class="name">RICHARD SCHWENKE</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Richard is Managing Director and Co-founder of Contorion GmbH, building and developing a successful B2B e-commerce business. Over the years, the German national has acquired the skills and expertise to deliver strategic and applied solutions. Richard is well respected amongst his peers and as a reputable advisor.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/AndreaCostantini.png" alt="Andrea Costantini">
 					<div class="head"><div class="name">ANDREA COSTANTINI</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Andrea currently operates as Vice President of the Agrati Group and CFO. The Italian spent five years working as a Senior Auditor for one of the big four, KPMG as well as Arthur Andersen in Milan, Italy. He has also developed his experience at big brands including Coca-Cola, where he operated as Principal International Auditor. Andrea brings a solid global understanding of the trade finance sector.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/RichardWatts.png" alt="Richard Watts">
 					<div class="head"><div class="name">RICHARD WATTS</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Richard is experienced in all areas of shipping, trading, insurance, finance and legal matters. As Founder and Managing Director of HR Maritime based in Geneva, he navigates the business with a strategic approach to international and trading in the shipping industry. In his 17 year trading career, he has worked at Addax&amp;Oryx Group’s Rice Trading Company and Ascot Commodities NV. Richard became a Fellow of the ICS (Institute of Chartered Shipbrokers) in 2010.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/DmitryLazarichev.png" alt="Dmitry Lazarichev">
 					<div class="head"><div class="name">DMITRY LAZARICHEV</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">With 16 years experience, Dmitry is a finance professional and brings his entrepreneurial flair to the board. Dimitry founded Wirex, one of the first crypto mobile banks, now backed by the SBI Group Over the last three years, he has been deeply involved in blockchain technology and digital asset creation. Following a career in financial consulting, he launched his first UK based venture in commodity trading in 2012. Executive MBA degree at London Cass Business School.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/AndreaMonaco.png" alt="Andrea Monaco">
 					<div class="head"><div class="name">Andrea Monaco</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Andrea is Chief Operation Officer at VI.BE.MAC. SpA, with a wealth of experience in capital management, risk analytics, governance and regulatory, working at Citigroup, Deutsche Bank, Sony and GlaxoSmithKline. His career provides an array of business aptitudes in the financial and technology sectors and he successfully completed a Fintech Future Commerce course at the Massachusetts Institute of Technology.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/AngelicaLipsdaCruz.jpg" alt="Angelica Lips da Cruz">
 					<div class="head"><div class="name">Angelica Lips da Cruz</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Executive, leader and entrepreneur within digital financial solutions and financial ecosystems at ALDC Partnership leading the development of the New Financial Algorithm standard rating system. Ex global head of trade finance and supply chain financing at SEB. Previously Sales Director and Board Member at RCI Banque Nordic Countries and VP at Citibank London PLC, Investment banking, also heading European Credit Risk management and European CEEMEA reporting unit.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/SebastianoPicone.jpg" alt="Sebastiano Picone">
 					<div class="head"><div class="name">SEBASTIANO PICONE</div></div>
 					<a class="in" href="" target="_blank">in</a>
 					<div class="info">Commercial Director Italy of Moneyfarm. During his experience in Moneyfarm he contributed to build CRM and Sales teams and the service model to manage thousands of customers in two countries. Over years he acquired skills and expertise also in online and offline acquisition in the financial sector. Sebastiano earned the CFA designation in 2012.</div>
 				</div>
 
-				<div class="member">
+				<div class="member hide">
 					<img class="photo" src="img/team/ValentinPreobrazhensky.png" alt="Valentin Preobrazhensky">
 					<div class="head"><div class="name">Valentin Preobrazhensky</div></div>
 					<a class="in" href="" target="_blank">in</a>
@@ -362,7 +377,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="token">
+	<div class="token hide">
 		<div class="container">
 			<h1>TOKEN DISTRIBUTION TERMS</h1>
 
@@ -437,7 +452,7 @@
 			</form>
 		</div>
 	</div>
-	<div class="roadmap">
+	<div class="roadmap hide">
 		<div class="container">
 			<h1>ROADMAP</h1>
 			<div class="scheme">
@@ -484,95 +499,101 @@
 					<div class="info">Global cover.</div>
 				</div>
 			</div>
-			<h1>Number of users increase</h1>
-			<div class="numbers">
-				<div class="number">
-					<div class="icon">
-						<img class="ico" src="img/icons/n18.svg" alt="">
-						<img class="user" src="img/icons/user.svg" alt="">
+
+			<div class="increase1 hide">
+				<h1>Number of users increase</h1>
+			
+				<div class="numbers">
+					<div class="number delay05">
+						<div class="icon">
+							<canvas class="ico" id="increase1" width="160" height="160"></canvas>
+							<img class="user" src="img/icons/user.svg" alt="">
+						</div>
+						<div class="value">216000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball right"></div>
 					</div>
-					<div class="value">216000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball right"></div>
-				</div>
-				<div class="triangle"></div>
-				<div class="number">
-					<div class="icon">
-						<img class="ico" src="img/icons/n19.svg" alt="">
-						<img class="user" src="img/icons/user.svg" alt="">
+					<div class="triangle"></div>
+					<div class="number delay1">
+						<div class="icon">
+							<canvas class="ico" id="increase2" width="160" height="160"></canvas>
+							<img class="user" src="img/icons/user.svg" alt="">
+						</div>
+						<div class="value">768000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball left"></div>
+						<div class="ball right"></div>
 					</div>
-					<div class="value">768000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball left"></div>
-					<div class="ball right"></div>
-				</div>
-				<div class="triangle"></div>
-				<div class="number">
-					<div class="icon">
-						<img class="ico" src="img/icons/n20.svg" alt="">
-						<img class="user" src="img/icons/user.svg" alt="">
+					<div class="triangle"></div>
+					<div class="number delay15">
+						<div class="icon">
+							<canvas class="ico" id="increase3" width="160" height="160"></canvas>
+							<img class="user" src="img/icons/user.svg" alt="">
+						</div>
+						<div class="value">1248000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball left"></div>
 					</div>
-					<div class="value">1248000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball left"></div>
 				</div>
 			</div>
-
-			<h1>Trade volume grouth</h1>
-			<div class="numbers">
-				<div class="number bottom">
-					<div class="icon">
-						<img class="ico" src="img/icons/n18.svg" alt="">
+			
+			<div class="increase2 hide">
+				<h1>Trade volume grouth</h1>
+				<div class="numbers">
+					<div class="number delay05 bottom">
+						<div class="icon">
+							<canvas class="ico" id="increase4" width="160" height="160"></canvas>
+						</div>
+						<div class="value">216000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball right"></div>
 					</div>
-					<div class="value">216000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball right"></div>
-				</div>
-				<div class="triangle"></div>
-				<div class="number bottom">
-					<div class="icon">
-						<img class="ico" src="img/icons/n19.svg" alt="">
+					<div class="triangle"></div>
+					<div class="number delay1 bottom">
+						<div class="icon">
+							<canvas class="ico" id="increase5" width="160" height="160"></canvas>
+						</div>
+						<div class="value">768000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball left"></div>
+						<div class="ball right"></div>
 					</div>
-					<div class="value">768000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball left"></div>
-					<div class="ball right"></div>
-				</div>
-				<div class="triangle"></div>
-				<div class="number bottom">
-					<div class="icon">
-						<img class="ico" src="img/icons/n20.svg" alt="">
+					<div class="triangle"></div>
+					<div class="number delay15 bottom">
+						<div class="icon">
+							<canvas class="ico" id="increase6" width="160" height="160"></canvas>
+						</div>
+						<div class="value">1248000</div>
+						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+						<div class="ball left"></div>
 					</div>
-					<div class="value">1248000</div>
-					<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-					<div class="ball left"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="supporters">
+	<div class="supporters hide">
 		<div class="container">
 			<h1>OUR EARLY ADOPTERS AND SUPPORTERS</h1>
 			<div class="scroll">
 				<div class="block">
 					<div class="brands">
-						<a href="#" target="_blank" class="brand">
+						<a href="#" target="_blank" class="brand delay05">
 							<img class="logo" src="img/supporters/ramparts.png" alt="">
 							<div class="title">Legal support</div>
 						</a>
-						<a href="#" target="_blank" class="brand">
+						<a href="#" target="_blank" class="brand delay1">
 							<img class="logo" src="img/supporters/priority_token.png" alt="">
 							<div class="title">Token Sale support</div>
 						</a>
-						<a href="#" target="_blank" class="brand">
+						<a href="#" target="_blank" class="brand delay15">
 							<img class="logo" src="img/supporters/barnett_fletcher.png" alt="">
 							<div class="title">Media support</div>
 						</a>
-						<a href="#" target="_blank" class="brand">
+						<a href="#" target="_blank" class="brand delay2">
 							<img class="logo" src="img/supporters/nord_whale.png" alt="">
 							<div class="title">Technical developer</div>
 						</a>
-						<a href="#" target="_blank" class="brand">
+						<a href="#" target="_blank" class="brand delay25">
 							<img class="logo" src="img/supporters/topcoder.png" alt="">
 							<div class="title">Product Design</div>
 						</a>

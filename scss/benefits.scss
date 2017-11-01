@@ -1,7 +1,15 @@
 .benefits {
 	position: relative;
-	background: url(../img/gears.png) no-repeat left top $blue;
+	//background: url(../img/gears.png) no-repeat left top $blue;
+	background: url(../img/bg1.png) no-repeat right bottom $blue;
 	padding-bottom: 80px;
+
+	&.hide {
+		.item {
+			transform: translateX(-40px);
+			opacity: 0;
+		}
+	}
 
 	&:before {
 		content: "";
@@ -11,7 +19,8 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: url(../img/bg1.png) no-repeat right bottom;
+		//background: url(../img/bg1.png) no-repeat right bottom;
+		background: url(../img/gears.png) no-repeat left top;
 	}
 
 	.container {
@@ -41,6 +50,8 @@
 		padding: 20px;
 		background: rgba(26,151,213,.8);
 		box-shadow: 0 0 8px rgba(0,0,0,.3);
+
+		transition: all 1s;
 
 		.ico {
 			display: inline-block;

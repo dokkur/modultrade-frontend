@@ -5,6 +5,13 @@
 
 	background: url(../img/bg5.png) no-repeat left top $dark;
 
+	&.hide {
+		.brand {
+			transform: scale(.5);
+			opacity: 0;
+		}
+	}
+
 	&:before {
 		content: "";
 		display: block;
@@ -88,7 +95,7 @@
 			margin-right: 98px;
 			text-decoration: none;
 			color: #fff;
-			transition: color .3s;
+			transition: opacity 1s, transform 1s, color .3s;
 
 			.logo {
 				border-radius: 6px;

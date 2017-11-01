@@ -3,6 +3,11 @@
 	height: 500px;
 	background: url(../img/howitworks.jpg) no-repeat center $blue;
 	background-size: cover;
+	transition: opacity 1s;
+
+	&.hide {
+		opacity: 0;
+	}
 
 	.play {
 		position: absolute;

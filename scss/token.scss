@@ -2,7 +2,6 @@
 	position: relative;
 	padding-bottom: 20px;
 	text-align: center;
-
 	background: url(../img/bg5.png) no-repeat left top $dark;
 
 	&:before {
@@ -16,8 +15,15 @@
 		transform: scale(-1, -1);
 	}
 
+	&.hide {
+		.container {
+			opacity: 0;
+		}
+	}
+
 	.container {
 		width: 960px;
+		transition: opacity 1s;
 	}
 
 	h1 {

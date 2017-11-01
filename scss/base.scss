@@ -44,6 +44,12 @@ h1 {
 	text-align: center;
 	padding: 40px;
 	margin: 0;
+	transition: all 1s;
+}
+
+.hide h1 {
+	transform: translateY(-30px);
+	opacity: 0;
 }
 
 .container {

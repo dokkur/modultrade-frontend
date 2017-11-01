@@ -1,0 +1,151 @@
+.mtrc {
+	text-align: center;
+	padding-bottom: 120px;
+	background: url(../img/gears_top.png) no-repeat left bottom;
+
+	&.hide {
+		.container {
+			opacity: 0;
+		}
+	}
+
+	.container {
+		max-width: 1116px;
+		transition: opacity 1s;
+	}
+
+	h2 {
+		font-size: 36px;
+		line-height: 46px;
+		color: $blue;
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+
+	h3 {
+		font-size: 24px;
+		line-height: 28px;
+		color: $dark;
+		margin: 20px 0 20px 0;
+		text-transform: uppercase;
+	}
+
+
+	.mtrc_block {
+		position: relative;
+		text-align: justify;
+		box-shadow: 0 -2px 8px rgba(0,0,0,.4);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 104%;
+			height: 70%;
+			bottom: -2%;
+			left: -2%;
+			background: linear-gradient(to top, #fff 20%, rgba(255,255,255,0));
+		}
+
+		&:after {
+			content: "";
+			width: 100%;
+			visibility: hidden;
+			display: inline-block;
+		}
+
+		.item {
+			position: relative;
+			text-align: center;
+			width: 320px;
+			box-sizing: border-box;
+			padding: 0 20px;
+			display: inline-block;
+			vertical-align: top;
+
+			&.middle {
+				border-left: 1px dashed #e8e8e8;
+				border-right: 1px dashed #e8e8e8;
+				width: 450px;
+			}
+
+			h3 {
+				margin-top: 0;
+			}
+
+			.ico {
+				position: relative;
+				display: inline-block;
+				width: 160px;
+				height: 160px;
+
+				.ico_f, .ico_b, .ico_m {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.ico_f {
+					transition: transform .5s cubic-bezier(.21,.55,.47,1.81);
+				}
+				.ico_b {
+					transition: transform 1s;
+				}
+			}
+
+			&:hover {
+				.ico {
+					.ico_b {
+						transform: rotate(360deg);
+					}
+					.ico_f {
+						transform: scale(1.1);
+					}
+				}
+			}
+
+			&.hide {
+				.description {
+					transform: translateY(-10px);
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			.description {
+				font-size: 28px;
+				font-weight: bold;
+				color: $green;
+				text-transform: uppercase;
+				margin-top: 20px;
+				transition: all .8s;
+			}
+		}
+
+		.bar {
+			height: 10px;
+			background: $blue;
+			margin-bottom: 20px;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.mtrc {
+		.mtrc_block {
+			.item {
+				display: block;
+				width: auto;
+				margin-bottom: 80px;
+
+				&.middle {
+					border: none;
+					width: auto;
+				}
+			}
+		}
+	}
+}
