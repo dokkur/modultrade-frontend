@@ -1,0 +1,101 @@
+.countdown {
+	position: absolute;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -140px;
+	text-align: center;
+	transition: transform 1s, opacity 1s;
+	transition-delay: 2s;
+
+	&.hide {
+		transform: scale(.5);
+		opacity: 0;
+	}
+
+	.headline {
+		font-size: 30px;
+		color: $blue;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+	.date {
+		@extend %justify;
+		.item {
+			width: 86px;
+			height: 113px;
+			border: 1px solid #fff;
+			border-radius: 8px;
+			color: #fff;
+			text-align: center;
+
+			.number	{
+				font-size: 48px;
+				line-height: 48px;
+				margin: 10px 0 20px 0;
+			}
+			.title {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 36%;
+		height: 100%;
+		bottom: 0;
+		border-bottom: 1px solid $green;
+	}
+		&:before {
+			border-bottom-left-radius: 8px;
+		}
+		&:after {
+			right: 0;
+			border-bottom-right-radius: 8px;
+		}
+
+	.atpresale {
+		font-size: 18px;
+		color: #fff;
+		border: 1px solid $green;
+		border-bottom: none;
+		border-radius: 8px;
+		padding: 10px 0 20px 0;
+
+		.title {
+			position: absolute;
+			color: $green;
+			bottom: -8px;
+			width: 100%;
+			font-weight: bold;
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+	.countdown {
+		position: relative;
+		left: auto;
+		top: auto;
+		margin: 0;
+		margin-bottom: 60px;
+		width: auto;
+
+		.date {
+			.item {
+				width: 22%;
+			}
+		}
+
+		.headline {
+			font-size: 24px;
+			color: $blue;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+		}
+	}
+}

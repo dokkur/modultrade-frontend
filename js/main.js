@@ -1,6 +1,7 @@
 function main() {
 	setTimeout(function() {
 		$('.main').removeClass('hide');
+		$('.countdown').removeClass('hide');
 	}, 1000);
 	setTimeout(function() {
 		$('.main .tel').removeClass('delay');

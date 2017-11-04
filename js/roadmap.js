@@ -28,8 +28,9 @@ function scheme() {
 	}
 
 	roadmapStart = function() {
-		canva.gotoAndStop(1);
-
+		if (canva) {
+			canva.gotoAndStop(1);
+		}
 		$('.roadmap .b').hover(function() {
 			canva['g'+$(this).index()].play();
 		});
