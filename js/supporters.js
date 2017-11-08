@@ -1,11 +1,16 @@
-function supporters() {
-	var brands = $('.supporters .brands');
-	var len = $('.supporters .brand').length;
+function initSupporters() {
+	supporters('#supportersBlock');
+	supporters('#mediaBlock');
+}
+
+function supporters(containerSelector) {
+	var brands = $(containerSelector + ' .brands');
+	var len = $(containerSelector + ' .brand').length;
 	var n = 0;
 	var pos = 0;
 	var w = 254;
-	var left = $('.supporters .scroll .arrow.left');
-	var right = $('.supporters .scroll .arrow.right');
+	var left = $(containerSelector + ' .scroll .arrow.left');
+	var right = $(containerSelector + ' .scroll .arrow.right');
 	
 	left.click(scrollLeft);
 	right.click(scrollRight);

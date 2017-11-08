@@ -4,9 +4,9 @@ $(function() {
 	participate();
 	howitworks();
 	team();
-	supporters();
+    initSupporters();
 	roadmap();
-	brandsScroll();
+	// brandsScroll();
 
 	setTimeout(function() {
 		scrolling();
