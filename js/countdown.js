@@ -1,11 +1,12 @@
 function countdown() {
     var countdownContainer = $('#countdown');
-    var days = countdownContainer.find('.days')
-    var hours = countdownContainer.find('.hours')
-    var minutes = countdownContainer.find('.minutes')
-    var seconds = countdownContainer.find('.seconds')
+    var secondsLeft = parseInt(countdownContainer.data('seconds-left'));
+    var days = countdownContainer.find('.days');
+    var hours = countdownContainer.find('.hours');
+    var minutes = countdownContainer.find('.minutes');
+    var seconds = countdownContainer.find('.seconds');
     var timer = new Timer();
-    timer.start({countdown: true, precision: 'seconds', startValues: { seconds: 25 * 60 * 60 }});
+    timer.start({countdown: true, precision: 'seconds', startValues: { seconds: secondsLeft }});
     timer.addEventListener('secondsUpdated', function(e) {
         days.html(timer.getTimeValues().days);
         hours.html(timer.getTimeValues().hours);
