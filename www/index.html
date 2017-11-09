@@ -1,758 +1,828 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>ModulTrade</title>
-	<link href="favicon.ico" rel="icon">
-	<meta name="format-detection" content="telephone=no">
-	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/style.css?v3" type="text/css" rel="stylesheet">
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/createjs-2015.11.26.min.js"></script>
-	<script src="js/script.js?v3"></script>
+    <meta charset="UTF-8">
+    <title>ModulTrade</title>
+    <link href="favicon.ico" rel="icon">
+    <meta name="format-detection" content="telephone=no">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css?v3" type="text/css" rel="stylesheet">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/easytimer.min.js"></script>
+    <script src="js/createjs-2015.11.26.min.js"></script>
+    <script src="js/script.js?v4"></script>
 </head>
 <body>
-	<div class="main hide">
-		<video class="video_bg" preload="auto" autoplay loop>
-			<source src="video/bg.mp4" type="video/mp4"> 
-		</video>
-		<!-- <div class="fade"></div> -->
-		<div class="container">
-			<div class="header">
-				<!-- <div class="hamburger">
-					<div class="s1"></div>
-					<div class="s2"></div>
-					<div class="s3"></div>
-				</div> -->
-				<div class="soc">
-					<a class="tel delay" href="#" target="_blank">
-						<span class="btn_bg"></span>
-						<span class="txt">Join us</span>
-					</a>
-					<a class="soc_btn in delay" href="#" target="_blank"></a>
-					<a class="soc_btn m delay" href="#" target="_blank"></a>
-					<a class="soc_btn f delay" href="#" target="_blank"></a>
-					<a class="soc_btn t delay" href="#" target="_blank"></a>
-					<a class="soc_btn r delay" href="#" target="_blank"></a>
-					<a class="soc_btn b delay" href="#" target="_blank"></a>
-				</div>
-				<a class="small_btn modultrade_btn delay" href="https://modultrade.com/" target="_blank">modultrade.com</a>
-				<div class="right_block delay05">
-					<div class="enter">
-						<a class="login" href="#">Login</a>
-						<span>|</span>
-						<a class="register" href="#">Register</a>
-					</div>
-					<div class="lang">
-						<a class="small_btn" href="#">English</a>
-						<div class="items">
-							<a class="item" href="#">English</a>
-							<a class="item" href="#">Русский</a>
-							<a class="item" href="#">中文</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<img class="logo" src="img/modultrade_logo.svg" alt="ModulTrade">
+<div class="main hide">
+    <video class="video_bg" preload="auto" autoplay loop>
+        <source src="video/bg.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="fade"></div> -->
+    <div class="container">
+        <div class="header">
+            <!-- <div class="hamburger">
+                <div class="s1"></div>
+                <div class="s2"></div>
+                <div class="s3"></div>
+            </div> -->
+            <div class="soc">
+                <a class="tel delay" href="#" target="_blank">
+                    <span class="btn_bg"></span>
+                    <span class="txt">Join us</span>
+                </a>
+                <a class="soc_btn in delay" href="#" target="_blank"></a>
+                <a class="soc_btn m delay" href="#" target="_blank"></a>
+                <a class="soc_btn f delay" href="#" target="_blank"></a>
+                <a class="soc_btn t delay" href="#" target="_blank"></a>
+                <a class="soc_btn r delay" href="#" target="_blank"></a>
+                <a class="soc_btn b delay" href="#" target="_blank"></a>
+            </div>
+            <a class="small_btn modultrade_btn delay" href="https://modultrade.com/" target="_blank">modultrade.com</a>
+            <div class="right_block delay05">
+                <div class="enter">
+                    <a class="login" href="#">Login</a>
+                    <span>|</span>
+                    <a class="register" href="#">Register</a>
+                </div>
+                <div class="lang">
+                    <a class="small_btn" href="#">English</a>
+                    <div class="items">
+                        <a class="item" href="#">English</a>
+                        <a class="item" href="#">Русский</a>
+                        <a class="item" href="#">中文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<a class="rated delay1" href="https://icobench.com/ico/modultrade" target="_blank" rel="nofollow" title="ModulTrade on ICObench">
-				<img border="0" src="https://icobench.com/rated/modultrade?shape=square&amp;size=s" width="100px" height="100px" alt="ModulTrade ICO rating">
-			</a>
-			
-			<!-- <div class="text_block delay05">
-				<span class="blue">Democratizing global trade</span> with blockchain technology
-			</div> -->
-			
-			<!-- <div class="discount">40% Discount Ends in 3 weeks</div> -->
+        <img class="logo" src="img/modultrade_logo.svg" alt="ModulTrade">
 
-			<div class="countdown hide">
-				<div class="headline">30% discount ends&nbsp;in</div>
-				<div class="date">
-					<div class="item">
-						<div class="number days">0</div>
-						<div class="title">days</div>
-					</div>
-					<div class="item">
-						<div class="number hours">0</div>
-						<div class="title">hours</div>
-					</div>
-					<div class="item">
-						<div class="number minutes">0</div>
-						<div class="title">minutes</div>
-					</div>
-					<div class="item">
-						<div class="number seconds">0</div>
-						<div class="title">seconds</div>
-					</div>
-				</div>
-				<div class="atpresale">
-					100 000 MTRc tokens sold out<br>
-					$1 000 321.17 collected
-					<div class="title">at Pre-Sale</div>
-				</div>
-			</div>
+        <a class="rated delay1" href="https://icobench.com/ico/modultrade" target="_blank" rel="nofollow"
+           title="ModulTrade on ICObench">
+            <img border="0" src="https://icobench.com/rated/modultrade?shape=square&amp;size=s" width="100px"
+                 height="100px" alt="ModulTrade ICO rating">
+        </a>
 
-			<div class="buttons">
-				<a class="button frame delay delay3" href="#">Try MVP</a>
-				<a class="button green delay delay35" href="#">Participate in Pre-Sale</a>
-				<a class="button frame delay delay4" href="#">download WP</a>
-			</div>
-		</div>
-	</div>
-	<div class="participate hide">
-		<div class="container">
-			<h1>Be a part of this revolutionary change<br>in how we trade around the world</h1>
-			
-			<div class="products">
-				<div class="product hide delay05">
-					<h2>Application</h2>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/application_b.svg" alt="">
-						<img class="ico_f" src="img/icons/application.svg" alt="">
-					</div>
-					<h3>For small enterprises</h3>
-					<div class="description">an ecosystem that gives an opportunity to trade globally</div>
-					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
-				</div>
-				<div class="product hide delay1">
-					<h2>Plug-in button</h2>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/plugin_button_b.svg" alt="">
-						<img class="ico_f" src="img/icons/plugin_button.svg" alt="">
-					</div>
-					<h3>For Marketplaces Retailers</h3>
-					<div class="description">a customer service for international trade in one plug-in button</div>
-					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
-				</div>
-				<div class="product hide delay15">
-					<h2>Platform</h2>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/platform_b.svg" alt="">
-						<img class="ico_f" src="img/icons/platform.svg" alt="">
-					</div>
-					<h3>For trade services Providers</h3>
-					<div class="description">a platform for direct collaboration with trade participants</div>
-					<span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
-				</div>
-			</div>
-		</div>
-	</div>
+        <!-- <div class="text_block delay05">
+            <span class="blue">Democratizing global trade</span> with blockchain technology
+        </div> -->
 
-	<div class="howitworks hide">
-		<div class="play">
-			<div class="btn"><div class="arrow"></div></div>
-			<div class="text">How it works</div>
-		</div>
-	</div>
+        <!-- <div class="discount">40% Discount Ends in 3 weeks</div> -->
 
-	<div class="mtrc hide">
-		<div class="container">
-			<h1>We fix all hassle and risks for small businesses<br>in a global trade just for 1% fee</h1>
-			<h2>MTRc is</h2>
-			
-			<div class="mtrc_block">
-				<div class="bar"></div>
-				<div class="item hide">
-					<h3>Value</h3>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
-						<img class="ico_m" src="img/icons/money.svg" alt="">
-						<img class="ico_f" src="img/icons/money_b.svg" alt="">
-					</div>
-					<div class="description">0% сredit</div>
-				</div>
-				<div class="item middle hide">
-					<h3>Safety</h3>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
-						<img class="ico_f" src="img/icons/safety.svg" alt="">
-					</div>
-					<div class="description">secure smart-contract payment</div>
-				</div>
-				<div class="item hide">
-					<h3>Service</h3>
-					<div class="ico">
-						<img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
-						<img class="ico_f" src="img/icons/service.svg" alt="">
-					</div>
-					<div class="description">1% for end-to-end trade services</div>
-				</div>
-			</div>
-			<br><br>
-			<h2>Phenomenally cost-effective and secure acces<br>to global B2B trade in once click</h2>
-			<br><br>
-			<div class="button orange">Participate in Pre-Sale</div>
-		</div>
-	</div>
+        <div id="countdown" class="countdown hide">
+            <div class="headline">30% discount ends&nbsp;in</div>
+            <div class="date">
+                <div class="item">
+                    <div class="number days">0</div>
+                    <div class="title">days</div>
+                </div>
+                <div class="item">
+                    <div class="number hours">0</div>
+                    <div class="title">hours</div>
+                </div>
+                <div class="item">
+                    <div class="number minutes">0</div>
+                    <div class="title">minutes</div>
+                </div>
+                <div class="item">
+                    <div class="number seconds">0</div>
+                    <div class="title">seconds</div>
+                </div>
+            </div>
+            <div class="atpresale">
+                100 000 MTRc tokens sold out<br>
+                $1 000 321.17 collected
+                <div class="title">at Pre-Sale</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a class="button frame delay delay3" href="#">Try MVP</a>
+            <a class="button green delay delay35" href="#">Participate in Pre-Sale</a>
+            <a class="button frame delay delay4" href="#">download WP</a>
+        </div>
+    </div>
+</div>
+<div class="participate hide">
+    <div class="container">
+        <h1>Be a part of this revolutionary change<br>in how we trade around the world</h1>
+
+        <div class="products">
+            <div class="product hide delay05">
+                <h2>Application</h2>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/application_b.svg" alt="">
+                    <img class="ico_f" src="img/icons/application.svg" alt="">
+                </div>
+                <h3>For small enterprises</h3>
+                <div class="description">an ecosystem that gives an opportunity to trade globally</div>
+                <span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
+            </div>
+            <div class="product hide delay1">
+                <h2>Plug-in button</h2>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/plugin_button_b.svg" alt="">
+                    <img class="ico_f" src="img/icons/plugin_button.svg" alt="">
+                </div>
+                <h3>For Marketplaces Retailers</h3>
+                <div class="description">a customer service for international trade in one plug-in button</div>
+                <span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
+            </div>
+            <div class="product hide delay15">
+                <h2>Platform</h2>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/platform_b.svg" alt="">
+                    <img class="ico_f" src="img/icons/platform.svg" alt="">
+                </div>
+                <h3>For trade services Providers</h3>
+                <div class="description">a platform for direct collaboration with trade participants</div>
+                <span class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="howitworks hide">
+    <div class="play">
+        <div class="btn">
+            <div class="arrow"></div>
+        </div>
+        <div class="text">How it works</div>
+    </div>
+</div>
+
+<div class="mtrc hide">
+    <div class="container">
+        <h1>We fix all hassle and risks for small businesses<br>in a global trade just for 1% fee</h1>
+        <h2>MTRc is</h2>
+
+        <div class="mtrc_block">
+            <div class="bar"></div>
+            <div class="item hide">
+                <h3>Value</h3>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+                    <img class="ico_m" src="img/icons/money.svg" alt="">
+                    <img class="ico_f" src="img/icons/money_b.svg" alt="">
+                </div>
+                <div class="description">0% сredit</div>
+            </div>
+            <div class="item middle hide">
+                <h3>Safety</h3>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+                    <img class="ico_f" src="img/icons/safety.svg" alt="">
+                </div>
+                <div class="description">secure smart-contract payment</div>
+            </div>
+            <div class="item hide">
+                <h3>Service</h3>
+                <div class="ico">
+                    <img class="ico_b" src="img/icons/mtrc_b.svg" alt="">
+                    <img class="ico_f" src="img/icons/service.svg" alt="">
+                </div>
+                <div class="description">1% for end-to-end trade services</div>
+            </div>
+        </div>
+        <br><br>
+        <h2>Phenomenally cost-effective and secure acces<br>to global B2B trade in once click</h2>
+        <br><br>
+        <div class="button orange">Participate in Pre-Sale</div>
+    </div>
+</div>
 
 
-	<div class="benefits hide">
-		<div class="container">
-			<h1>PROJECT BENEFITS AND OPPORTUNITIES</h1>
-			<div class="text_block">Every trade served on ModulTrade platform requires MTRc</div>
+<div class="benefits hide">
+    <div class="container">
+        <h1>PROJECT BENEFITS AND OPPORTUNITIES</h1>
+        <div class="text_block">Every trade served on ModulTrade platform requires MTRc</div>
 
-			<div class="items">
-				<div class="item delay05">
-					<div class="ico l"></div>
-					<div class="title">Token Holders</div>
-					<div class="subtitle">MTRc valuation<br>increase</div>
-					<div class="text">While the number of MTRc is limited the increase of trades pushes the demand for MTRc and its valuation</div>
-					<br><br>
-					<div class="subtitle">Trade Guarantee &amp; Financing for ModulTrade customers</div>
-					<div class="text">Every token holder will be able to provide MTRc for a fee to finance the trade on the platform. Potential amount and fee will be calculated on the basis of customers’ Reputation</div>
-				</div>
-				<div class="item delay1">
-					<div class="ico c"></div>
-					<div class="title">Customers</div>
-					<div class="subtitle">Secure mechanism for payment &amp; delivery at 1%</div>
-					<div class="text">based on smart-contracts, vs. up to 15% charged by banks for Letter of Credit</div>
-					<br><br>
-					<div class="subtitle">Credit in MTRc</div>
-					<div class="text">from Trade&amp;Reputation Network to srart the trade</div>
-					<br><br>
-					<div class="subtitle">End-to-end trade services</div>
-					<div class="text">which eases the trade (logistics, insurance, tax, etc)</div>
-				</div>
-				<div class="item last delay15">
-					<div class="ico r"></div>
-					<div class="title">Market places</div>
-					<div class="subtitle">Increase of sales and direct access to customers</div>
-					<div class="text">based on the new customer's services: credit, cryptocurrencies payments and end-to-end trade service</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="team">
-		<div class="bg"></div>
-		<div class="container">
-			<div class="members team_members hide">
-				<h1>OUR TEAM</h1>
-				<div class="member hide">
-					<img class="photo" src="img/team/EvgenyKaplin.jpg" alt="Evgeny Kaplin">
-					<div class="head">
-						<div class="name">Evgeny Kaplin</div>
-						<div class="position">Co-founder /<br>CEO</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">17+ years in International Trade and Banking business with Strategic consulting experience. Successfully launched and ran a global trade finance platform in one of the top Europe bank. McKinsey, Sberbank, Cargill, Gazprom</div>
-				</div>
+        <div class="items">
+            <div class="item delay05">
+                <div class="ico l"></div>
+                <div class="title">Token Holders</div>
+                <div class="subtitle">MTRc valuation<br>increase</div>
+                <div class="text">While the number of MTRc is limited the increase of trades pushes the demand for MTRc
+                    and its valuation
+                </div>
+                <br><br>
+                <div class="subtitle">Trade Guarantee &amp; Financing for ModulTrade customers</div>
+                <div class="text">Every token holder will be able to provide MTRc for a fee to finance the trade on the
+                    platform. Potential amount and fee will be calculated on the basis of customers’ Reputation
+                </div>
+            </div>
+            <div class="item delay1">
+                <div class="ico c"></div>
+                <div class="title">Customers</div>
+                <div class="subtitle">Secure mechanism for payment &amp; delivery at 1%</div>
+                <div class="text">based on smart-contracts, vs. up to 15% charged by banks for Letter of Credit</div>
+                <br><br>
+                <div class="subtitle">Credit in MTRc</div>
+                <div class="text">from Trade&amp;Reputation Network to srart the trade</div>
+                <br><br>
+                <div class="subtitle">End-to-end trade services</div>
+                <div class="text">which eases the trade (logistics, insurance, tax, etc)</div>
+            </div>
+            <div class="item last delay15">
+                <div class="ico r"></div>
+                <div class="title">Market places</div>
+                <div class="subtitle">Increase of sales and direct access to customers</div>
+                <div class="text">based on the new customer's services: credit, cryptocurrencies payments and end-to-end
+                    trade service
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/JeanChaanine.jpg" alt="Jean Chaanine">
-					<div class="head">
-						<div class="name">Jean Chaanine</div>
-						<div class="position">Co-founder /<br>CEO</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">25+ years in technology senior management on operational and strategic levels in multinational services and banking sectors. SODEXO, Crédit Agricole CIB, Société Générale, Banque de France, Saint Gobain, Ciments Français</div>
-				</div>
+<div class="team">
+    <div class="bg"></div>
+    <div class="container">
+        <div class="members team_members hide">
+            <h1>OUR TEAM</h1>
+            <div class="member hide">
+                <img class="photo" src="img/team/EvgenyKaplin.jpg" alt="Evgeny Kaplin">
+                <div class="head">
+                    <div class="name">Evgeny Kaplin</div>
+                    <div class="position">Co-founder /<br>CEO</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">17+ years in International Trade and Banking business with Strategic consulting
+                    experience. Successfully launched and ran a global trade finance platform in one of the top Europe
+                    bank. McKinsey, Sberbank, Cargill, Gazprom
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/KarthikeyanKaliyaperumal.jpg" alt="Karthikeyan Kaliyaperumal">
-					<div class="head">
-						<div class="name">Karthikeyan Kaliyaperumal</div>
-						<div class="position">Co-founder / CTO</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">20+ years experience in US business of Technology Strategy and Product Management in global fortune 500 companies building supply chain, financial and Marketing pla tforms for Nielsen, CBOE, Acxiom etc</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/JeanChaanine.jpg" alt="Jean Chaanine">
+                <div class="head">
+                    <div class="name">Jean Chaanine</div>
+                    <div class="position">Co-founder /<br>CEO</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">25+ years in technology senior management on operational and strategic levels in
+                    multinational services and banking sectors. SODEXO, Crédit Agricole CIB, Société Générale, Banque de
+                    France, Saint Gobain, Ciments Français
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/FedorSapronov.jpg" alt="Fedor Sapronov">
-					<div class="head">
-						<div class="name">Fedor Sapronov</div>
-						<div class="position">Co-founder /<br>Business development</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">17 years in corporate banking and investments with deep experience in Lending, Project &amp; Structured finance. Executive positions in top banking institutions - Sberbank, Alfa-bank, Gazprombank.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/KarthikeyanKaliyaperumal.jpg" alt="Karthikeyan Kaliyaperumal">
+                <div class="head">
+                    <div class="name">Karthikeyan Kaliyaperumal</div>
+                    <div class="position">Co-founder / CTO</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">20+ years experience in US business of Technology Strategy and Product Management in
+                    global fortune 500 companies building supply chain, financial and Marketing pla tforms for Nielsen,
+                    CBOE, Acxiom etc
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/MarcoRosso.jpg" alt="Marco Rosso">
-					<div class="head">
-						<div class="name">Marco Rosso</div>
-						<div class="position">Co-founder /<br>Product Development</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">18+ years in the EMEA financial services with deep risk management and structured finance experience. Positions in advisory Ernst&amp;Young, Reuters&nbsp;— and banking institutions.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/FedorSapronov.jpg" alt="Fedor Sapronov">
+                <div class="head">
+                    <div class="name">Fedor Sapronov</div>
+                    <div class="position">Co-founder /<br>Business development</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">17 years in corporate banking and investments with deep experience in Lending, Project
+                    &amp; Structured finance. Executive positions in top banking institutions - Sberbank, Alfa-bank,
+                    Gazprombank.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/VitalyPykhtin.jpg" alt="Vitaly Pykhtin">
-					<div class="head">
-						<div class="name">Vitaly Pykhtin</div>
-						<div class="position">Product development<br>Market lead</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">15+ years of experience across banking industry. Successful launch and management of retail and wholesale lending platforms at BNP Paribas. International markets exposure in transaction banking.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/MarcoRosso.jpg" alt="Marco Rosso">
+                <div class="head">
+                    <div class="name">Marco Rosso</div>
+                    <div class="position">Co-founder /<br>Product Development</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">18+ years in the EMEA financial services with deep risk management and structured
+                    finance experience. Positions in advisory Ernst&amp;Young, Reuters&nbsp;— and banking institutions.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/DmitryShipilov.jpg" alt="Dmitry Shipilov">
-					<div class="head">
-						<div class="name">Dmitry Shipilov</div>
-						<div class="position">Product<br>development/<br>Technical lead</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">12+ years in IT solution development, architecture, technology consulting and business analysis.</div>
-				</div>
-				<div class="member hide">
-					<img class="photo" src="img/team/ArtemRadchenko.jpg" alt="Artem Radchenko">
-					<div class="head">
-						<div class="name">Artem Radchenko</div>
-						<div class="position">Product development/<br>Product Designer</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">12+ years experience in the different fields of Product Design, UX design for different electronic marketplaces and services.</div>
-				</div>
-				<div class="member hide">
-					<img class="photo" src="img/team/OlyaKolomoets.jpg" alt="Olya Kolomoets">
-					<div class="head">
-						<div class="name">Olya Kolomoets</div>
-						<div class="position">Product development<br>Project Manager</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Highly skilled project and program manager with experience leading projects across multiple industries.</div>
-				</div>
-				<div class="member hide">
-					<img class="photo" src="img/team/AlexeyKosinski.jpg" alt="Alexey Kosinski">
-					<div class="head">
-						<div class="name">Alexey Kosinski</div>
-						<div class="position">Product development<br>Blockchain developer</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Experienced full-stack developer with a focus on building new products and decentralized systems powered by Blockchain technology.</div>
-				</div>
-				<div class="member hide">
-					<img class="photo" src="img/team/VolodymyrZinchenko.jpg" alt="Volodymyr Zinchenko">
-					<div class="head">
-						<div class="name">Volodymyr Zinchenko</div>
-						<div class="position">Product development Full-stack developer</div>
-					</div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Experienced software engineer with a full-stack knowledge base. Quality-oriented technical lead, clean-code enthusiast capable of delivering complex solutions with maximum efficiency.</div>
-				</div>
-			</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/VitalyPykhtin.jpg" alt="Vitaly Pykhtin">
+                <div class="head">
+                    <div class="name">Vitaly Pykhtin</div>
+                    <div class="position">Product development<br>Market lead</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">15+ years of experience across banking industry. Successful launch and management of
+                    retail and wholesale lending platforms at BNP Paribas. International markets exposure in transaction
+                    banking.
+                </div>
+            </div>
 
-			<div class="members advisors_members hide">
-				<h1>ADVISORS</h1>
+            <div class="member hide">
+                <img class="photo" src="img/team/DmitryShipilov.jpg" alt="Dmitry Shipilov">
+                <div class="head">
+                    <div class="name">Dmitry Shipilov</div>
+                    <div class="position">Product<br>development/<br>Technical lead</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">12+ years in IT solution development, architecture, technology consulting and business
+                    analysis.
+                </div>
+            </div>
+            <div class="member hide">
+                <img class="photo" src="img/team/ArtemRadchenko.jpg" alt="Artem Radchenko">
+                <div class="head">
+                    <div class="name">Artem Radchenko</div>
+                    <div class="position">Product development/<br>Product Designer</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">12+ years experience in the different fields of Product Design, UX design for
+                    different electronic marketplaces and services.
+                </div>
+            </div>
+            <div class="member hide">
+                <img class="photo" src="img/team/OlyaKolomoets.jpg" alt="Olya Kolomoets">
+                <div class="head">
+                    <div class="name">Olya Kolomoets</div>
+                    <div class="position">Product development<br>Project Manager</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Highly skilled project and program manager with experience leading projects across
+                    multiple industries.
+                </div>
+            </div>
+            <div class="member hide">
+                <img class="photo" src="img/team/AlexeyKosinski.jpg" alt="Alexey Kosinski">
+                <div class="head">
+                    <div class="name">Alexey Kosinski</div>
+                    <div class="position">Product development<br>Blockchain developer</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Experienced full-stack developer with a focus on building new products and
+                    decentralized systems powered by Blockchain technology.
+                </div>
+            </div>
+            <div class="member hide">
+                <img class="photo" src="img/team/VolodymyrZinchenko.jpg" alt="Volodymyr Zinchenko">
+                <div class="head">
+                    <div class="name">Volodymyr Zinchenko</div>
+                    <div class="position">Product development Full-stack developer</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Experienced software engineer with a full-stack knowledge base. Quality-oriented
+                    technical lead, clean-code enthusiast capable of delivering complex solutions with maximum
+                    efficiency.
+                </div>
+            </div>
+        </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/BernardLietaer.jpg" alt="Bernard Lietaer">
-					<div class="head"><div class="name">BERNARD LIETAER</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Bernard, author of The Future of Money is an international expert in the design and implementation of currency systems. He co-designed and implemented the convergence mechanism to the single European currency system (the Euro) and served as president of the Electronic Payment System.</div>
-				</div>
+        <div class="members advisors_members hide">
+            <h1>ADVISORS</h1>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/RichardSchwenke.png" alt="Richard Schwenke">
-					<div class="head"><div class="name">RICHARD SCHWENKE</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Richard is Managing Director and Co-founder of Contorion GmbH, building and developing a successful B2B e-commerce business. Over the years, the German national has acquired the skills and expertise to deliver strategic and applied solutions. Richard is well respected amongst his peers and as a reputable advisor.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/BernardLietaer.jpg" alt="Bernard Lietaer">
+                <div class="head">
+                    <div class="name">BERNARD LIETAER</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Bernard, author of The Future of Money is an international expert in the design and
+                    implementation of currency systems. He co-designed and implemented the convergence mechanism to the
+                    single European currency system (the Euro) and served as president of the Electronic Payment System.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/AndreaCostantini.png" alt="Andrea Costantini">
-					<div class="head"><div class="name">ANDREA COSTANTINI</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Andrea currently operates as Vice President of the Agrati Group and CFO. The Italian spent five years working as a Senior Auditor for one of the big four, KPMG as well as Arthur Andersen in Milan, Italy. He has also developed his experience at big brands including Coca-Cola, where he operated as Principal International Auditor. Andrea brings a solid global understanding of the trade finance sector.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/RichardSchwenke.png" alt="Richard Schwenke">
+                <div class="head">
+                    <div class="name">RICHARD SCHWENKE</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Richard is Managing Director and Co-founder of Contorion GmbH, building and developing
+                    a successful B2B e-commerce business. Over the years, the German national has acquired the skills
+                    and expertise to deliver strategic and applied solutions. Richard is well respected amongst his
+                    peers and as a reputable advisor.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/RichardWatts.png" alt="Richard Watts">
-					<div class="head"><div class="name">RICHARD WATTS</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Richard is experienced in all areas of shipping, trading, insurance, finance and legal matters. As Founder and Managing Director of HR Maritime based in Geneva, he navigates the business with a strategic approach to international and trading in the shipping industry. In his 17 year trading career, he has worked at Addax&amp;Oryx Group’s Rice Trading Company and Ascot Commodities NV. Richard became a Fellow of the ICS (Institute of Chartered Shipbrokers) in 2010.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/AndreaCostantini.png" alt="Andrea Costantini">
+                <div class="head">
+                    <div class="name">ANDREA COSTANTINI</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Andrea currently operates as Vice President of the Agrati Group and CFO. The Italian
+                    spent five years working as a Senior Auditor for one of the big four, KPMG as well as Arthur
+                    Andersen in Milan, Italy. He has also developed his experience at big brands including Coca-Cola,
+                    where he operated as Principal International Auditor. Andrea brings a solid global understanding of
+                    the trade finance sector.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/DmitryLazarichev.png" alt="Dmitry Lazarichev">
-					<div class="head"><div class="name">DMITRY LAZARICHEV</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">With 16 years experience, Dmitry is a finance professional and brings his entrepreneurial flair to the board. Dimitry founded Wirex, one of the first crypto mobile banks, now backed by the SBI Group Over the last three years, he has been deeply involved in blockchain technology and digital asset creation. Following a career in financial consulting, he launched his first UK based venture in commodity trading in 2012. Executive MBA degree at London Cass Business School.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/RichardWatts.png" alt="Richard Watts">
+                <div class="head">
+                    <div class="name">RICHARD WATTS</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Richard is experienced in all areas of shipping, trading, insurance, finance and legal
+                    matters. As Founder and Managing Director of HR Maritime based in Geneva, he navigates the business
+                    with a strategic approach to international and trading in the shipping industry. In his 17 year
+                    trading career, he has worked at Addax&amp;Oryx Group’s Rice Trading Company and Ascot Commodities
+                    NV. Richard became a Fellow of the ICS (Institute of Chartered Shipbrokers) in 2010.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/AndreaMonaco.png" alt="Andrea Monaco">
-					<div class="head"><div class="name">Andrea Monaco</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Andrea is Chief Operation Officer at VI.BE.MAC. SpA, with a wealth of experience in capital management, risk analytics, governance and regulatory, working at Citigroup, Deutsche Bank, Sony and GlaxoSmithKline. His career provides an array of business aptitudes in the financial and technology sectors and he successfully completed a Fintech Future Commerce course at the Massachusetts Institute of Technology.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/DmitryLazarichev.png" alt="Dmitry Lazarichev">
+                <div class="head">
+                    <div class="name">DMITRY LAZARICHEV</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">With 16 years experience, Dmitry is a finance professional and brings his
+                    entrepreneurial flair to the board. Dimitry founded Wirex, one of the first crypto mobile banks, now
+                    backed by the SBI Group Over the last three years, he has been deeply involved in blockchain
+                    technology and digital asset creation. Following a career in financial consulting, he launched his
+                    first UK based venture in commodity trading in 2012. Executive MBA degree at London Cass Business
+                    School.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/AngelicaLipsdaCruz.jpg" alt="Angelica Lips da Cruz">
-					<div class="head"><div class="name">Angelica Lips da Cruz</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Executive, leader and entrepreneur within digital financial solutions and financial ecosystems at ALDC Partnership leading the development of the New Financial Algorithm standard rating system. Ex global head of trade finance and supply chain financing at SEB. Previously Sales Director and Board Member at RCI Banque Nordic Countries and VP at Citibank London PLC, Investment banking, also heading European Credit Risk management and European CEEMEA reporting unit.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/AndreaMonaco.png" alt="Andrea Monaco">
+                <div class="head">
+                    <div class="name">Andrea Monaco</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Andrea is Chief Operation Officer at VI.BE.MAC. SpA, with a wealth of experience in
+                    capital management, risk analytics, governance and regulatory, working at Citigroup, Deutsche Bank,
+                    Sony and GlaxoSmithKline. His career provides an array of business aptitudes in the financial and
+                    technology sectors and he successfully completed a Fintech Future Commerce course at the
+                    Massachusetts Institute of Technology.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/SebastianoPicone.jpg" alt="Sebastiano Picone">
-					<div class="head"><div class="name">SEBASTIANO PICONE</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">Commercial Director Italy of Moneyfarm. During his experience in Moneyfarm he contributed to build CRM and Sales teams and the service model to manage thousands of customers in two countries. Over years he acquired skills and expertise also in online and offline acquisition in the financial sector. Sebastiano earned the CFA designation in 2012.</div>
-				</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/AngelicaLipsdaCruz.jpg" alt="Angelica Lips da Cruz">
+                <div class="head">
+                    <div class="name">Angelica Lips da Cruz</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Executive, leader and entrepreneur within digital financial solutions and financial
+                    ecosystems at ALDC Partnership leading the development of the New Financial Algorithm standard
+                    rating system. Ex global head of trade finance and supply chain financing at SEB. Previously Sales
+                    Director and Board Member at RCI Banque Nordic Countries and VP at Citibank London PLC, Investment
+                    banking, also heading European Credit Risk management and European CEEMEA reporting unit.
+                </div>
+            </div>
 
-				<div class="member hide">
-					<img class="photo" src="img/team/ValentinPreobrazhensky.png" alt="Valentin Preobrazhensky">
-					<div class="head"><div class="name">Valentin Preobrazhensky</div></div>
-					<a class="in" href="" target="_blank">in</a>
-					<div class="info">As current CEO of Latoken and founder of startup Zalogo, Valentin joins our board with vast experience and knowledge in the financial industry. Having studied at respected institutes Harvard and Stanford, Valentin went on to build his career working at IHS, CERA, VTB and Sberbank. He also fulfilled a successful role as equity portfolio manager at both Avega Capital and Marcuard Spectrum.</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="token hide">
-		<div class="container">
-			<h1>TOKEN DISTRIBUTION TERMS</h1>
+            <div class="member hide">
+                <img class="photo" src="img/team/SebastianoPicone.jpg" alt="Sebastiano Picone">
+                <div class="head">
+                    <div class="name">SEBASTIANO PICONE</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">Commercial Director Italy of Moneyfarm. During his experience in Moneyfarm he
+                    contributed to build CRM and Sales teams and the service model to manage thousands of customers in
+                    two countries. Over years he acquired skills and expertise also in online and offline acquisition in
+                    the financial sector. Sebastiano earned the CFA designation in 2012.
+                </div>
+            </div>
 
-			<div class="buttons">
-				<a class="button frame" href="#">Download one pager</a>
-				<a class="button frame green-frame" href="#">Download TM</a>
-			</div>
-			
-			<table>
-				<tr>
-					<td class="head bold">Pre-sale</td>
-					<td class="head bold">40%</td>
-					<td class="head">10,000,000</td>
-				</tr>
-				<tr>
-					<td>Token sale Phase 1</td>
-					<td class="bold green">25%</td>
-					<td>6 000 000</td>
-				</tr>
-				<tr>
-					<td>Token sale Phase 2</td>
-					<td class="bold green">15%</td>
-					<td>7 000 000</td>
-				</tr>
-				<tr>
-					<td>Token sale Phase 3</td>
-					<td class="bold green">10%</td>
-					<td>8 000 000</td>
-				</tr>
-				<tr>
-					<td>Token sale Phase 4</td>
-					<td class="bold grey">0%</td>
-					<td>9 000 000</td>
-				</tr>
-			</table>
-			
-			<div class="button orange">BUY TOKENS</div>
+            <div class="member hide">
+                <img class="photo" src="img/team/ValentinPreobrazhensky.png" alt="Valentin Preobrazhensky">
+                <div class="head">
+                    <div class="name">Valentin Preobrazhensky</div>
+                </div>
+                <a class="in" href="" target="_blank">in</a>
+                <div class="info">As current CEO of Latoken and founder of startup Zalogo, Valentin joins our board with
+                    vast experience and knowledge in the financial industry. Having studied at respected institutes
+                    Harvard and Stanford, Valentin went on to build his career working at IHS, CERA, VTB and Sberbank.
+                    He also fulfilled a successful role as equity portfolio manager at both Avega Capital and Marcuard
+                    Spectrum.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="token hide">
+    <div class="container">
+        <h1>TOKEN DISTRIBUTION TERMS</h1>
 
-			<div class="info_blocks">
-				<div class="info_block">
-					<div class="title">Tokens for distribution:</div>
-					<div class="val">40’000’000 MTRc</div>
-					<div class="text">ERC20 Ethereum token</div>
-				</div>
-				<div class="info_block">
-					<div class="title">Pre-sale Token price:</div>
-					<div class="val">1MTRc = 1ETH/700</div>
-					<div class="text">Token sale price: will be not less than 1MTRc = 1ETH/700 and determined 2 weeks prior to Token Sale</div>
-				</div>
-				<div class="info_block">
-					<div class="title">Soft cap:</div>
-					<div class="val">15’000ETH</div>
-					<div class="text">Hard cap: to be announced 2 weeks prior the Token Sale Accepted currencies ETH &amp; BTC &amp; FIAT</div>
-				</div>
-			</div>
+        <div class="buttons">
+            <a class="button frame" href="#">Download one pager</a>
+            <a class="button frame green-frame" href="#">Download TM</a>
+        </div>
 
-			<div class="discounts">
-				<div class="discount blue">
-					<div class="percent">+5%</div>
-					<div class="text">discount<br>for the amount<br>from 100 ETH</div>
-				</div>
+        <table>
+            <tr>
+                <td class="head bold">Pre-sale</td>
+                <td class="head bold">40%</td>
+                <td class="head">10,000,000</td>
+            </tr>
+            <tr>
+                <td>Token sale Phase 1</td>
+                <td class="bold green">25%</td>
+                <td>6 000 000</td>
+            </tr>
+            <tr>
+                <td>Token sale Phase 2</td>
+                <td class="bold green">15%</td>
+                <td>7 000 000</td>
+            </tr>
+            <tr>
+                <td>Token sale Phase 3</td>
+                <td class="bold green">10%</td>
+                <td>8 000 000</td>
+            </tr>
+            <tr>
+                <td>Token sale Phase 4</td>
+                <td class="bold grey">0%</td>
+                <td>9 000 000</td>
+            </tr>
+        </table>
 
-				<div class="discount green">
-					<div class="percent">+10%</div>
-					<div class="text">discount<br>for the amount<br>from 1’000 ETH</div>
-				</div>
-			</div>
+        <div class="button orange">BUY TOKENS</div>
 
-			<form class="subscribe">
-				<input class="email" name="email" type="email" placeholder="Subscribe to our news letter">
-				<input class="send_btn" type="submit">
-			</form>
-		</div>
-	</div>
-	<div class="roadmap hide">
-		<div class="container">
-			<h1>ROADMAP</h1>
-			<div class="scheme">
-				<!-- <img class="img" src="img/roadmap.png" alt=""> -->
-				<canvas class="img" id="roadmap" width="1122" height="650"></canvas>
-				
-				<div class="b b1"></div>
-				<div class="b b2">
-					<div class="info">Business plan and initial development strategy was created. Core team of four MIT mates was united and decided to take the project forward.</div>
-				</div>
-				<div class="b b3">
-					<div class="info">Modultrade Ltd. incorporated in UK. Development strategy approved. Established basic organizational principles. Operation infrastructure set-up.</div>
-				</div>
-				<div class="b b4">
-					<div class="info">White paper &amp; business model created and verified by professional consultant (ITIRIV) &amp; Ramparts Europe law firm.</div>
-				</div>
-				<div class="b b5">
-					<div class="info">Prototype is able to support B2B trade: conclude a contract, block funds on the contract, track logistics info, release funds upon delivery.</div>
-				</div>
-				<div class="b b6">
-					<div class="info">Users get a Letter of Credit functionality to execute trades trustfully in crypto or fiat currencies.</div>
-				</div>
-				<div class="b b7">
-					<div class="info">Trade participants receives end to end service to execute trades easily and efficiently. Logistics, insurance, tax, bookkeeping services onboarded.</div>
-				</div>
+        <div class="info_blocks">
+            <div class="info_block">
+                <div class="title">Tokens for distribution:</div>
+                <div class="val">40’000’000 MTRc</div>
+                <div class="text">ERC20 Ethereum token</div>
+            </div>
+            <div class="info_block">
+                <div class="title">Pre-sale Token price:</div>
+                <div class="val">1MTRc = 1ETH/700</div>
+                <div class="text">Token sale price: will be not less than 1MTRc = 1ETH/700 and determined 2 weeks prior
+                    to Token Sale
+                </div>
+            </div>
+            <div class="info_block">
+                <div class="title">Soft cap:</div>
+                <div class="val">15’000ETH</div>
+                <div class="text">Hard cap: to be announced 2 weeks prior the Token Sale Accepted currencies ETH &amp;
+                    BTC &amp; FIAT
+                </div>
+            </div>
+        </div>
 
-				<div class="b r b8">
-					<div class="info">Users can execute cross-border trade in ModulTrade ecosystem. Platform operates in UK, Italy, Germany. Trade participants receives end to end service to execut</div>
-				</div>
+        <div class="discounts">
+            <div class="discount blue">
+                <div class="percent">+5%</div>
+                <div class="text">discount<br>for the amount<br>from 100 ETH</div>
+            </div>
 
-				<div class="b r b9">
-					<div class="info">Users on the base of Reputational capital can get financing to facilitate the trade.</div>
-				</div>
+            <div class="discount green">
+                <div class="percent">+10%</div>
+                <div class="text">discount<br>for the amount<br>from 1’000 ETH</div>
+            </div>
+        </div>
 
-				<div class="b r b10">
-					<div class="info">Achieved a critical mass of users that creates a network effect in ModulTrade ecosystem. Users can execu</div>
-				</div>
+        <form class="subscribe">
+            <input class="email" name="email" type="email" placeholder="Subscribe to our news letter">
+            <input class="send_btn" type="submit">
+        </form>
+    </div>
+</div>
+<div class="roadmap hide">
+    <div class="container">
+        <h1>ROADMAP</h1>
+        <div class="scheme">
+            <!-- <img class="img" src="img/roadmap.png" alt=""> -->
+            <canvas class="img" id="roadmap" width="1122" height="650"></canvas>
 
-				<div class="b r b11">
-					<div class="info">Users receive access to reliable counterparties and global choice at optimal price.</div>
-				</div>
+            <div class="b b1"></div>
+            <div class="b b2">
+                <div class="info">Business plan and initial development strategy was created. Core team of four MIT
+                    mates was united and decided to take the project forward.
+                </div>
+            </div>
+            <div class="b b3">
+                <div class="info">Modultrade Ltd. incorporated in UK. Development strategy approved. Established basic
+                    organizational principles. Operation infrastructure set-up.
+                </div>
+            </div>
+            <div class="b b4">
+                <div class="info">White paper &amp; business model created and verified by professional consultant
+                    (ITIRIV) &amp; Ramparts Europe law firm.
+                </div>
+            </div>
+            <div class="b b5">
+                <div class="info">Prototype is able to support B2B trade: conclude a contract, block funds on the
+                    contract, track logistics info, release funds upon delivery.
+                </div>
+            </div>
+            <div class="b b6">
+                <div class="info">Users get a Letter of Credit functionality to execute trades trustfully in crypto or
+                    fiat currencies.
+                </div>
+            </div>
+            <div class="b b7">
+                <div class="info">Trade participants receives end to end service to execute trades easily and
+                    efficiently. Logistics, insurance, tax, bookkeeping services onboarded.
+                </div>
+            </div>
 
-				<div class="b r b12">
-					<div class="info">Global cover.</div>
-				</div>
-			</div>
+            <div class="b r b8">
+                <div class="info">Users can execute cross-border trade in ModulTrade ecosystem. Platform operates in UK,
+                    Italy, Germany. Trade participants receives end to end service to execut
+                </div>
+            </div>
 
-			<div class="increase1 hide">
-				<h1>Number of users increase</h1>
-			
-				<div class="numbers">
-					<div class="number delay05">
-						<div class="icon">
-							<canvas class="ico" id="increase1" width="160" height="160"></canvas>
-							<img class="user" src="img/icons/user.svg" alt="">
-						</div>
-						<div class="value">216000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball right"></div>
-					</div>
-					<div class="triangle"></div>
-					<div class="number delay1">
-						<div class="icon">
-							<canvas class="ico" id="increase2" width="160" height="160"></canvas>
-							<img class="user" src="img/icons/user.svg" alt="">
-						</div>
-						<div class="value">768000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball left"></div>
-						<div class="ball right"></div>
-					</div>
-					<div class="triangle"></div>
-					<div class="number delay15">
-						<div class="icon">
-							<canvas class="ico" id="increase3" width="160" height="160"></canvas>
-							<img class="user" src="img/icons/user.svg" alt="">
-						</div>
-						<div class="value">1248000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball left"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="increase2 hide">
-				<h1>Trade volume grouth</h1>
-				<div class="numbers">
-					<div class="number delay05 bottom">
-						<div class="icon">
-							<canvas class="ico" id="increase4" width="160" height="160"></canvas>
-						</div>
-						<div class="value">216000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball right"></div>
-					</div>
-					<div class="triangle"></div>
-					<div class="number delay1 bottom">
-						<div class="icon">
-							<canvas class="ico" id="increase5" width="160" height="160"></canvas>
-						</div>
-						<div class="value">768000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball left"></div>
-						<div class="ball right"></div>
-					</div>
-					<div class="triangle"></div>
-					<div class="number delay15 bottom">
-						<div class="icon">
-							<canvas class="ico" id="increase6" width="160" height="160"></canvas>
-						</div>
-						<div class="value">1248000</div>
-						<div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
-						<div class="ball left"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="b r b9">
+                <div class="info">Users on the base of Reputational capital can get financing to facilitate the trade.
+                </div>
+            </div>
 
-	<div class="supporters hide">
-		<div class="container">
-			<h1>OUR EARLY ADOPTERS AND SUPPORTERS</h1>
-			<div class="scroll">
-				<div class="block">
-					<div class="brands">
-						<a href="http://ramparts.eu" target="_blank" class="brand delay05">
-							<img class="logo" src="img/supporters/ramparts.png" alt="">
-							<div class="title">Legal support</div>
-						</a>
-						<a href="http://ptoken.io" target="_blank" class="brand delay1">
-							<img class="logo" src="img/supporters/priority_token.png" alt="">
-							<div class="title">Token Sale support</div>
-						</a>
-						<a href="http://www.barnettfletcher.com/" target="_blank" class="brand delay15">
-							<img class="logo" src="img/supporters/barnett_fletcher.png" alt="">
-							<div class="title">Media support</div>
-						</a>
-						<a href="http://nordwhale.com/" target="_blank" class="brand delay2">
-							<img class="logo" src="img/supporters/nord_whale.png" alt="">
-							<div class="title">Technical developer</div>
-						</a>
-						<a href="https://www.topcoder.com/" target="_blank" class="brand delay25">
-							<img class="logo" src="img/supporters/topcoder.png" alt="">
-							<div class="title">Product Design</div>
-						</a>
-						<a href="https://www.foundersspace.com/" target="_blank" class="brand delay25">
-							<img class="logo" src="img/supporters/founders_space.png" alt="">
-							<div class="title">Founders Space</div>
-						</a>
-						<a href="https://www.contorion.de/" target="_blank" class="brand delay25">
-							<img class="logo" src="img/supporters/contorion.jpg" alt="">
-							<div class="title">Contorion</div>
-						</a>
-					</div>
-				</div>
+            <div class="b r b10">
+                <div class="info">Achieved a critical mass of users that creates a network effect in ModulTrade
+                    ecosystem. Users can execu
+                </div>
+            </div>
 
-				<svg class="arrow left" width="14px" height="24px" viewBox="0 0 14 24">
-					<polyline stroke-width="4" stroke-miterlimit="10" points="13.486,1.027 2.514,12.001 13.486,22.973"/>
-				</svg>
+            <div class="b r b11">
+                <div class="info">Users receive access to reliable counterparties and global choice at optimal price.
+                </div>
+            </div>
 
-				<svg class="arrow right" width="14px" height="24px" viewBox="0 0 14 24">
-					<polyline stroke-width="4" stroke-miterlimit="10" points="0.514,1.027 11.486,12.001 0.514,22.973"/>
-				</svg>
+            <div class="b r b12">
+                <div class="info">Global cover.</div>
+            </div>
+        </div>
 
-			</div>
+        <div class="increase1 hide">
+            <h1>Number of users increase</h1>
 
-			<div class="text_block">30% Pre-Sale Bonus Ends in 2 Weeks</div>
-			<a class="button orange" href="https://product.modultrade.com/" target="_blank">TRY OUR MVP</a>
-		</div>
-	</div>
+            <div class="numbers">
+                <div class="number delay05">
+                    <div class="icon">
+                        <canvas class="ico" id="increase1" width="160" height="160"></canvas>
+                        <img class="user" src="img/icons/user.svg" alt="">
+                    </div>
+                    <div class="value">216000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball right"></div>
+                </div>
+                <div class="triangle"></div>
+                <div class="number delay1">
+                    <div class="icon">
+                        <canvas class="ico" id="increase2" width="160" height="160"></canvas>
+                        <img class="user" src="img/icons/user.svg" alt="">
+                    </div>
+                    <div class="value">768000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball left"></div>
+                    <div class="ball right"></div>
+                </div>
+                <div class="triangle"></div>
+                <div class="number delay15">
+                    <div class="icon">
+                        <canvas class="ico" id="increase3" width="160" height="160"></canvas>
+                        <img class="user" src="img/icons/user.svg" alt="">
+                    </div>
+                    <div class="value">1248000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball left"></div>
+                </div>
+            </div>
+        </div>
 
-	<div class="media hide">
-		<div class="container">
-			<h1>MEDIA ABOUT US</h1>
-			<div class="scroll">
-				<div class="block">
-					<div class="brands">
-						<a href="https://www.chipin.com/modultrade-ico-efficient-global-trade-blockchain/" target="_blank" class="brand delay05">
-							<img class="logo" src="/img/media/chipin.png" alt="">
-							<div class="title">Chipin</div>
-						</a>
-						<a href="https://coinidol.com/modultrade-blockchain-platform/" target="_blank" class="brand delay1">
-							<img class="logo" src="/img/media/coinidol.jpg" alt="">
-							<div class="title">CoinIdol</div>
-						</a>
-						<a href="https://www.coinschedule.com/" target="_blank" class="brand delay15">
-							<img class="logo" src="/img/media/coinschedul.png" alt="">
-							<div class="title">CoinSchedule</div>
-						</a>
-						<a href="http://usethebitcoin.com/insight-global-trade-experts-shaking-industry-new-blockchain-based-application/" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/utb.jpg" alt="">
-							<div class="title">UseTheBitCoin.com</div>
-						</a>
+        <div class="increase2 hide">
+            <h1>Trade volume grouth</h1>
+            <div class="numbers">
+                <div class="number delay05 bottom">
+                    <div class="icon">
+                        <canvas class="ico" id="increase4" width="160" height="160"></canvas>
+                    </div>
+                    <div class="value">216000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball right"></div>
+                </div>
+                <div class="triangle"></div>
+                <div class="number delay1 bottom">
+                    <div class="icon">
+                        <canvas class="ico" id="increase5" width="160" height="160"></canvas>
+                    </div>
+                    <div class="value">768000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball left"></div>
+                    <div class="ball right"></div>
+                </div>
+                <div class="triangle"></div>
+                <div class="number delay15 bottom">
+                    <div class="icon">
+                        <canvas class="ico" id="increase6" width="160" height="160"></canvas>
+                    </div>
+                    <div class="value">1248000</div>
+                    <div class="more">•&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;•</div>
+                    <div class="ball left"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-						<a href="https://news.bitcoin.com/pr-blockchain-pioneers-in-trade-finance-launch-token-pre-sale-to-open-global-trade-for-small-enterprises/" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/bitcoin_com.png" alt="">
-							<div class="title">Bitcoin.com</div>
-						</a>
-						<a href="https://www.cryptocoinsnews.com/modultrade-will-revolutionise-way-world-trades-blockchain-tech/" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/cryptocoins_news.png" alt="">
-							<div class="title">Cryptocoinsnews.com.com</div>
-						</a>
-						<a href="http://www.newsbtc.com/2017/10/03/blockchain-pioneers-in-trade-finance-launch-token-pre-sale-to-open-global-trade-for-small-enterprises/" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/news_btc.png" alt="">
-							<div class="title">Newsbtc.com</div>
-						</a>
-						<a href="https://www.youtube.com/watch?v=Q0djsrlGuCk" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/ituber.jpg" alt="">
-							<div class="title">ITuber</div>
-						</a>
-						<a href="https://www.youtube.com/watch?v=16Uo_j6JnFA&t=66s" target="_blank" class="brand delay2">
-							<img class="logo" src="/img/media/coin_review.png" alt="">
-							<div class="title">Coin Interview</div>
-						</a>
-					</div>
-				</div>
+<div class="supporters hide">
+    <div class="container">
+        <h1>OUR EARLY ADOPTERS AND SUPPORTERS</h1>
+        <div class="scroll">
+            <div class="block">
+                <div class="brands">
+                    <a href="#" target="_blank" class="brand delay05">
+                        <img class="logo" src="img/supporters/ramparts.png" alt="">
+                        <div class="title">Legal support</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay1">
+                        <img class="logo" src="img/supporters/priority_token.png" alt="">
+                        <div class="title">Token Sale support</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay15">
+                        <img class="logo" src="img/supporters/barnett_fletcher.png" alt="">
+                        <div class="title">Media support</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay2">
+                        <img class="logo" src="img/supporters/nord_whale.png" alt="">
+                        <div class="title">Technical developer</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay25">
+                        <img class="logo" src="img/supporters/topcoder.png" alt="">
+                        <div class="title">Product Design</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay25">
+                        <img class="logo" src="img/supporters/topcoder.png" alt="">
+                        <div class="title">Product Design</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay25">
+                        <img class="logo" src="img/supporters/topcoder.png" alt="">
+                        <div class="title">Product Design</div>
+                    </a>
+                    <a href="#" target="_blank" class="brand delay25">
+                        <img class="logo" src="img/supporters/topcoder.png" alt="">
+                        <div class="title">Product Design</div>
+                    </a>
+                </div>
+            </div>
 
-				<svg class="arrow left" width="14px" height="24px" viewBox="0 0 14 24">
-					<polyline stroke-width="4" stroke-miterlimit="10" points="13.486,1.027 2.514,12.001 13.486,22.973"/>
-				</svg>
+            <svg class="arrow left" width="14px" height="24px" viewBox="0 0 14 24">
+                <polyline stroke-width="4" stroke-miterlimit="10" points="13.486,1.027 2.514,12.001 13.486,22.973"/>
+            </svg>
 
-				<svg class="arrow right" width="14px" height="24px" viewBox="0 0 14 24">
-					<polyline stroke-width="4" stroke-miterlimit="10" points="0.514,1.027 11.486,12.001 0.514,22.973"/>
-				</svg>
+            <svg class="arrow right" width="14px" height="24px" viewBox="0 0 14 24">
+                <polyline stroke-width="4" stroke-miterlimit="10" points="0.514,1.027 11.486,12.001 0.514,22.973"/>
+            </svg>
 
-				<div>
+            <div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
 
-	<div class="subscribe_block hide">
-		<div class="container">
-			<form class="subscribe">
-				<input class="email" name="email" type="email" placeholder="Subscribe to our news letter">
-				<input class="send_btn" type="submit">
-			</form>
-			<a class="button orange" href="#">Buy tokens</a>
-		</div>
-	</div>
-	<div class="footer hide">
-		<div class="container">
-			<div class="block_1">
-				<img class="logo" src="img/modultrade_logo.svg" alt="ModulTrade">
-				<div class="modultrade_btn delay">
-					<a class="small_btn" href="https://modultrade.com/" target="_blank">modultrade.com</a>
-				</div>
-				<a class="link delay1" href="#">Project</a>
-				<a class="link delay15" href="#">Sign in</a>
-				<a class="link delay2" href="#">Sign up</a>
-			</div>
-			<div class="block_2">
-				<div class="soc">
-					<a class="tel delay" href="#" target="_blank">
-						<span class="btn_bg"></span>
-						<span class="txt">Join us</span>
-					</a>
-					<a class="soc_btn in delay" href="#" target="_blank"></a>
-					<a class="soc_btn m delay" href="#" target="_blank"></a>
-					<a class="soc_btn f delay" href="#" target="_blank"></a>
-					<a class="soc_btn t delay" href="#" target="_blank"></a>
-					<a class="soc_btn r delay" href="#" target="_blank"></a>
-					<a class="soc_btn b delay" href="#" target="_blank"></a>
-				</div>
-				<div class="contacts delay2">Contacts:<br>
-					Kemp House, 160 City Road, London, UK, EC1V 2NX<br>
-					Email: <a href="mailto:tokensale@modultrade.io">tokensale@modultrade.io</a><br>
-					Modultrade © 2017
-				</div>
-				<div class="info delay25">MTRcs are tokens in ModulTrade’s value ecosystem.  They are not refundable, nor are they securities or for speculation. There is no promise of future performance. There is no suggestion or promise that MTRc has or will hold a particular value.</div>
-			</div>
-		</div>
-	</div>
+        <div class="text_block">40% Pre-Sale Bonus Ends in 2 Weeks</div>
+        <a class="button orange" href="#">TRY OUR MPV</a>
+    </div>
+</div>
+
+<div class="subscribe_block hide">
+    <div class="container">
+        <form class="subscribe">
+            <input class="email" name="email" type="email" placeholder="Subscribe to our news letter">
+            <input class="send_btn" type="submit">
+        </form>
+        <a class="button orange" href="#">Buy tokens</a>
+    </div>
+</div>
+<div class="footer hide">
+    <div class="container">
+        <div class="block_1">
+            <img class="logo" src="img/modultrade_logo.svg" alt="ModulTrade">
+            <div class="modultrade_btn delay">
+                <a class="small_btn" href="https://modultrade.com/" target="_blank">modultrade.com</a>
+            </div>
+            <a class="link delay1" href="#">Project</a>
+            <a class="link delay15" href="#">Sign in</a>
+            <a class="link delay2" href="#">Sign up</a>
+        </div>
+        <div class="block_2">
+            <div class="soc">
+                <a class="tel delay" href="#" target="_blank">
+                    <span class="btn_bg"></span>
+                    <span class="txt">Join us</span>
+                </a>
+                <a class="soc_btn in delay" href="#" target="_blank"></a>
+                <a class="soc_btn m delay" href="#" target="_blank"></a>
+                <a class="soc_btn f delay" href="#" target="_blank"></a>
+                <a class="soc_btn t delay" href="#" target="_blank"></a>
+                <a class="soc_btn r delay" href="#" target="_blank"></a>
+                <a class="soc_btn b delay" href="#" target="_blank"></a>
+            </div>
+            <div class="contacts delay2">Contacts:<br>
+                Kemp House, 160 City Road, London, UK, EC1V 2NX<br>
+                Email: <a href="mailto:tokensale@modultrade.io">tokensale@modultrade.io</a><br>
+                Modultrade © 2017
+            </div>
+            <div class="info delay25">MTRcs are tokens in ModulTrade’s value ecosystem. They are not refundable, nor are
+                they securities or for speculation. There is no promise of future performance. There is no suggestion or
+                promise that MTRc has or will hold a particular value.
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
