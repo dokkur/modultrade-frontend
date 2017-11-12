@@ -139,6 +139,24 @@
 		.product {
 			display: block;
 			width: auto;
+
+			&.hide {
+				h3 {
+					transform: translateY(0);
+					opacity: 1;
+					visibility: visible;
+				}
+				.description {
+					transform: translateY(0);
+					opacity: 1;
+					visibility: visible;
+				}
+
+				.more {
+					transform: scale(1);
+					visibility: visible;
+				}
+			}
 		}
 	}
 }
