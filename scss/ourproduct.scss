@@ -178,7 +178,6 @@
 		.btn {
 			display: inline-block;
 			width: 320px;
-			//height: 94px;
 			border: 2px solid $dark;
 			border-radius: 10px;
 			box-sizing: border-box;
@@ -195,32 +194,10 @@
 			&.green {
 				color: $green;
 				border-color: $green;
-
-				&:hover {
-					color: #fff;
-					background: $green;
-				}
 			}
 			&.blue {
 				color: $blue;
 				border-color: $blue;
-				&:hover {
-					color: #fff;
-					background: $blue;
-				}
-			}
-
-			&.dark {
-				&:hover {
-					color: #fff;
-					background: $dark;
-				}
-			}
-
-			&:active {
-				transition: none;
-				background: $orange !important;
-				border-color: $orange;
 			}
 		}
 
