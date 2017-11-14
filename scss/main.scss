@@ -1,7 +1,7 @@
 .main {
 	position: relative;
 	height: 100%;
-	min-height: 600px;
+	min-height: 700px;
 	overflow: hidden;
 	//background: $dark;
 	background: url(../img/bg.jpg) no-repeat right top $dark;
@@ -124,6 +124,12 @@
 
 		.blue {
 			color: $blue;
+		}
+
+		.subtext {
+			margin-top: 55px;
+			color: $green;
+			font-size: 24px;
 		}
 	}
 

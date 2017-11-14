@@ -42,6 +42,7 @@
 		color: $dark;
 		box-sizing: border-box;
 		padding: 20px;
+		padding-bottom: 0;
 		border-radius: 6px;
 		transition: all .6s;
 
@@ -139,6 +140,24 @@
 		.product {
 			display: block;
 			width: auto;
+
+			&.hide {
+				h3 {
+					transform: translateY(0);
+					opacity: 1;
+					visibility: visible;
+				}
+				.description {
+					transform: translateY(0);
+					opacity: 1;
+					visibility: visible;
+				}
+
+				.more {
+					transform: scale(1);
+					visibility: visible;
+				}
+			}
 		}
 	}
 }
