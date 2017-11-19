@@ -256,15 +256,17 @@
 			margin-bottom: 20px;
 		}
 
-		.header {
-			padding: 20px 0;
-		}
-
 		.discount {
 			position: relative;
 			bottom: auto;
 			text-align: left;
 			margin: 40px 0;
+		}
+
+		.soc {
+			.soc_btn {
+				margin: 0 3px;
+			}
 		}
 
 		.buttons {

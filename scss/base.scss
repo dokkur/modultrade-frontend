@@ -74,6 +74,7 @@ h1 {
 	text-transform: uppercase;
 	text-align: center;
 	transition: all .3s;
+	vertical-align: middle;
 	cursor: pointer;
 
 	&:hover {
@@ -106,10 +107,35 @@ h1 {
 	vertical-align: middle;
 	
 	.play {
-		width: 100px;
-		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 70px;
 		border: 1px solid #fff;
 		border-radius: 100%;
+		background-image: url(../img/icons/play.svg);
+		background-repeat: no-repeat;
+		background-position: 60% center;
+		background-size: 26px;
+		transition: background .3s;
+
+		&.green {
+			background-color: $green;
+		}
+
+		&:hover {
+			background-color: $blue;
+		}
+		&:active {
+			transition: none;
+			background-color: $orange;
+		}
+	}
+
+	.button {
+		height: 72px;
+		padding-right: 60px !important;
 	}
 }
 
@@ -184,5 +210,17 @@ h1 {
 		font-size: 28px;
 		line-height: 38px;
 		padding: 40px 0;
+	}
+
+	.button_play {
+		.play {
+			width: 42px;
+			height: 42px;
+			background-size: 14px;
+		}
+		.button {
+			height: 44px;
+			padding-right: 20px !important;
+		}
 	}
 }
