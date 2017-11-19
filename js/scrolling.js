@@ -145,7 +145,7 @@ function scrolling() {
 			}
 		}
 
-		if (s+gap*2 > footer.offset().top) {
+		if (s+gap > footer.offset().top) {
 			navActive(nav_qa);
 			if (!footer$) {
 				footer$ = true;
