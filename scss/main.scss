@@ -42,7 +42,7 @@
 	.logo {
 		width: 312px;
 		margin-bottom: 30px;
-		margin-top: 40px;
+		margin-top: 160px;
 		transition: all 1s;
 	}
 
@@ -60,71 +60,13 @@
 		transition: all 1s cubic-bezier(.35,.69,.51,1.26);
 	}
 
-	/* .bottom {
-		position: absolute;
-		width: 100%;
-		height: 110px;
-		bottom: -110px;
-		background: url(../img/main_bg_bottom.png) no-repeat center top;
-		background-size: 100%;
-		z-index: 1;
-		transition: background .3s, visibility .3s;
-
-		&.hide {
-			background-position: 0 -110px;
-			visibility: hidden;
-		}
-	} */
-
-	.header {
-		padding: 50px 0;
-
-		.hamburger {
-			position: relative;
-			width: 36px;
-			height: 24px;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 100px;
-			cursor: pointer;
-			display: none;
-			
-			& > div {
-				position: absolute;
-				width: 100%;
-				height: 4px;
-				background: #fff;
-				border-radius: 4px;
-				transition: all .3s;
-			}
-
-			&:hover > div {
-				background: $blue;
-			}
-
-			&:active > div {
-				transition: none;
-				background: $orange;
-			}
-
-			.s2 {
-				top: 50%;
-				margin-top: -2px;
-			}
-
-			.s3 {
-				bottom: 0;
-			}
-		}
-	}
-
 	.text_block {
 		font-size: 30px;
 		font-weight: bold;
 		max-width: 500px;
 		color: #fff;
 		text-transform: uppercase;
-		padding: 20px 0;
+		padding: 30px 0;
 		transition: all 1s;
 
 		&-first {
@@ -140,75 +82,6 @@
 			color: $green;
 			font-size: 24px;
 		}
-	}
-
-	.right_block {
-		float: right;
-		transition: all 1s;
-
-		.enter {
-			display: inline-block;
-			color: #fff;
-			font-size: 18px;
-			margin-right: 40px;
-			vertical-align: middle;
-
-			.login, .register {
-				color: #fff;
-				text-decoration: none;
-				margin: 0 10px;
-
-				&:hover {
-					text-decoration: underline;
-				}
-
-				&:active {
-					color: $orange;
-				}
-			}
-		}
-
-		.lang {
-			position: relative;
-			display: inline-block;
-			cursor: pointer;
-
-			&:hover .items {
-				visibility: visible;
-				opacity: 1;
-			}
-
-			.items {
-				position: absolute;
-				top: 0;
-				border-radius: 12px;
-				overflow: hidden;
-				visibility: hidden;
-				opacity: 0;
-				transition: all .3s;
-			}
-
-			.item {
-				display: block;
-				background: #fff;
-				font-size: 18px;
-				color: $dark;
-				text-decoration: none;
-				padding: 8px 12px;
-				transition: all .3s;
-				
-				&:hover {
-					background: $blue;
-					color: #fff;
-				}
-				&:active {
-					transition: none;
-					background: $orange;
-				}
-			}
-		}
-		
-
 	}
 
 	.discount {
@@ -230,7 +103,7 @@
 	.buttons {
 		position: relative;
 		text-align: center;
-		margin-top: 60px;
+		margin-top: 20px;
 		.button {
 			font-size: 20px;
 			&.delay {
@@ -239,10 +112,15 @@
 		}
 	}
 
+	.soc {
+		margin-top: 30px;
+		text-align: center;
+	}
+
 	.events {
 		position: relative;
 		text-align: center;
-		margin-top: 60px;
+		margin-top: 40px;
 		transition: opacity 1s;
 
 		.headline {
@@ -283,140 +161,6 @@
 	}
 }
 
-.soc {
-	display: inline-block;
-	vertical-align: middle;
-
-	.tel {	
-		position: relative;
-		display: inline-block;
-		width: 79px;
-		height: 28px;
-		margin-right: 27px;
-		vertical-align: middle;
-		border-radius: 20px;
-		border: 1px solid transparent;
-		transition: all .3s, transform .5s cubic-bezier(.35,.69,.51,1.26);
-
-		font-size: 12px;
-		color: $dark;
-		text-decoration: none;
-		line-height: 28px;
-
-		&.delay {
-			transition-delay: 1.5s;
-		}
-
-		.btn_bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: url(../img/icons/soc/tel.png) no-repeat center;
-			background-size: 79px 28px;
-		}
-
-		.txt {
-			position: relative;
-			padding-left: 30px;
-		}
-
-		&:hover {
-			background: #fff;
-			border-color: #fff;
-			color: #fff;
-		}
-
-		&:active {
-			transition: none;
-			border-color: $orange;
-			background: $orange;
-			color: $orange;
-		}
-	}
-
-	.soc_btn {
-		display: inline-block;
-		width: 28px;
-		height: 28px;
-		margin-right: 27px;
-		background-repeat: no-repeat;
-		background-size: 100%;
-		vertical-align: middle;
-		border-radius: 100%;
-		transition: all .3s;
-		border: 1px solid transparent;
-
-		&:hover {
-			background-color: $blue;
-			border-color: $blue;
-			transform: scale(1.1);
-		}
-
-		&:active {
-			transition: none;
-			background-color: $orange;
-			border-color: $orange;
-		}
-
-		&.blue:hover {
-			background-color: #fff;
-			border-color: #fff;
-		}
-
-		&.blue:active {
-			background-color: $orange;
-			border-color: $orange;
-		}
-
-		&.in {
-			background-image: url(../img/icons/soc/in.png);
-			&.delay {transition-delay: 2s;}
-		}
-		&.m {
-			background-image: url(../img/icons/soc/m.png);
-			&.delay {transition-delay: 2.1s;}
-		}
-		&.f {
-			background-image: url(../img/icons/soc/f.png);
-			&.delay {transition-delay: 2.2s;}
-		}
-		&.t {
-			background-image: url(../img/icons/soc/t.png);
-			&.delay {transition-delay: 2.3s;}
-		}
-		&.r {
-			background-image: url(../img/icons/soc/r.png);
-			&.delay {transition-delay: 2.4s;}
-		}
-		&.b {
-			background-image: url(../img/icons/soc/b.png);
-			&.delay {transition-delay: 2.5s;}
-		}
-
-		&.in.blue {
-			background-image: url(../img/icons/soc/in_b.png);
-		}
-		&.m.blue {
-			background-image: url(../img/icons/soc/m_b.png);
-		}
-		&.f.blue {
-			background-image: url(../img/icons/soc/f_b.png);
-		}
-		&.t.blue {
-			background-image: url(../img/icons/soc/t_b.png);
-		}
-		&.r.blue {
-			background-image: url(../img/icons/soc/r_b.png);
-		}
-		&.b.blue {
-			background-image: url(../img/icons/soc/b_b.png);
-		}
-	}
-}
-
-
 
 .main.hide {
 	.logo {
@@ -432,9 +176,6 @@
 	.text_block {
 		opacity: 0;
 		transform: translateY(-20px);
-	}
-	.right_block {
-		transform: translateY(-200px);
 	}
 
 	.soc {
@@ -496,7 +237,7 @@
 
 		.logo {
 			width: 274px;
-			margin: 40px 0;
+			margin: 0 0 40px 0;
 		}
 
 		.cio {
@@ -517,18 +258,6 @@
 
 		.header {
 			padding: 20px 0;
-		}
-
-		.right_block {
-			float: none;
-			position: absolute;
-			top: 16px;
-			right: 20px;
-
-			.enter {
-				font-size: 16px;
-				margin-right: 0;
-			}
 		}
 
 		.discount {
@@ -570,28 +299,6 @@
 					font-size: 17px;
 				}
 			}
-		}
-	}
-
-	.soc {
-		display: block;
-		width: auto;
-		text-align: justify;
-		margin-top: 20px;
-
-		&:after {
-			content: "";
-			width: 100%;
-			visibility: hidden;
-			display: inline-block;
-		}
-
-		.tel {
-			margin-right: 0;
-		}
-		
-		.soc_btn {
-			margin: 0;
 		}
 	}
 }

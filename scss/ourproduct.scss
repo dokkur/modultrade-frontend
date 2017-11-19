@@ -1,5 +1,5 @@
 .ourproduct {
-	padding-bottom: 50px;
+	padding-bottom: 90px;
 	.container {
 		max-width: 1205px;
 	}
@@ -205,6 +205,15 @@
 			vertical-align: middle;
 		}
 	}
+
+	.buttons {
+		text-align: center;
+		margin-top: 90px;
+
+		.button1 {
+			margin-right: 310px;
+		}
+	}
 }
 
 
@@ -318,6 +327,13 @@
 				left: 49%;
 				height: 75px;
 				border-left: 2px dashed $blue;
+			}
+		}
+
+		.buttons {
+
+			.button1 {
+				margin: 0 0 20px 0;
 			}
 		}
 	}

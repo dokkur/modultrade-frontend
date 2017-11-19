@@ -2,6 +2,7 @@ function scrolling() {
 
 	var gap = $(window).height()/1.5;
 	var s;
+	var ourproduct = $('.ourproduct');
 	var participate = $('.participate'), participate$ = false;
 	var mtrc = $('.mtrc'), mtrc$ = false;
 	var howitworks = $('.howitworks'), howitworks$ = false;
@@ -15,9 +16,24 @@ function scrolling() {
 	var supporters = $('.supporters'), supporters$ = false;
 	var subscribe_block = $('.subscribe_block'), subscribe_block$ = false;
 	var footer = $('.footer'), footer$ = false;
+	var nav = $('.nav');
+	var nav_y = nav.offset().top;
+	var nav_active = $('.nav .a').first();
+
+	var nav_about = $('.nav_about');
+	var nav_team = $('.nav_team');
+	var nav_token = $('.nav_token');
+	var nav_roadmap = $('.nav_roadmap');
+	var nav_partners = $('.nav_partners');
+	var nav_media = $('.nav_media');
+	var nav_qa = $('.nav_qa');
 
 	function scrollAction() {
 		s = $(window).scrollTop();
+
+		if (s+gap > ourproduct.offset().top) {
+			navActive(nav_about);
+		}
 
 		if (s+gap > participate.offset().top) {
 			if (!participate$) {
@@ -48,6 +64,7 @@ function scrolling() {
 		}
 
 		if (s+gap > team.offset().top) {
+			navActive(nav_team);
 			if (!team$) {
 				team$ = true;
 				team.removeClass('hide').find('.member').each(function(i,v) {
@@ -74,6 +91,7 @@ function scrolling() {
 		}
 
 		if (s+gap > token.offset().top) {
+			navActive(nav_token);
 			if (!token$) {
 				token$ = true;
 				token.removeClass('hide');
@@ -81,6 +99,7 @@ function scrolling() {
 		}
 
 		if (s+gap > roadmap.offset().top) {
+			navActive(nav_roadmap);
 			if (!roadmap$) {
 				roadmap$ = true;
 				roadmap.removeClass('hide');
@@ -109,6 +128,7 @@ function scrolling() {
 		}
 
 		if (s+gap > supporters.offset().top) {
+			navActive(nav_partners);
 			if (!supporters$) {
 				supporters$ = true;
 				supporters.removeClass('hide');
@@ -126,6 +146,7 @@ function scrolling() {
 		}
 
 		if (s+gap*2 > footer.offset().top) {
+			navActive(nav_qa);
 			if (!footer$) {
 				footer$ = true;
 				footer.removeClass('hide');
@@ -136,7 +157,24 @@ function scrolling() {
 				}, 2000);
 			}
 		}
+
+		if (s >= nav_y) {
+			nav.addClass('fix');
+		} else {
+			nav.removeClass('fix');
+		}
 	}
 	$(window).scroll(scrollAction);
 	scrollAction();
+
+	$('.nav .a').click(function() {
+		$('html,body').stop().animate( { scrollTop: $($(this).attr('href')).offset().top }, 500 );
+		return false;
+	});
+
+	function navActive(a) {
+		nav_active.removeClass('active');
+		nav_active = a;
+		nav_active.addClass('active');
+	}
 }
