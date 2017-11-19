@@ -1,12 +1,12 @@
 .main {
 	position: relative;
 	height: 100%;
-	min-height: 1000px;
+	min-height: 1060px;
 	//overflow: hidden;
 	//background: $dark;
 	background: url(../img/bg.jpg) no-repeat right top $dark;
-	background-size: 100% auto;
-	margin-bottom: 100px;
+	background-size: auto 100%;
+	margin-bottom: 140px;
 
 	.video_bg {
 		position: absolute;
@@ -103,7 +103,7 @@
 	.buttons {
 		position: relative;
 		text-align: center;
-		margin-top: 20px;
+		margin-top: 50px;
 		.button {
 			font-size: 20px;
 			&.delay {
@@ -113,14 +113,14 @@
 	}
 
 	.soc {
-		margin-top: 30px;
+		margin-top: 60px;
 		text-align: center;
 	}
 
 	.events {
 		position: relative;
 		text-align: center;
-		margin-top: 40px;
+		margin-top: 60px;
 		transition: opacity 1s;
 
 		.headline {
@@ -282,7 +282,7 @@
 		.events {
 			position: relative;
 			text-align: center;
-			margin-top: 60px;
+			margin-top: 40px;
 			overflow: hidden;
 
 			.headline {
