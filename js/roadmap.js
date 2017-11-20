@@ -10,7 +10,7 @@ function roadmap() {
 
 function scheme() {
 	var canvas, stage, canva;
-	canvas = document.getElementById("roadmap");
+	canvas = document.getElementById("roadmap_canvas");
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);

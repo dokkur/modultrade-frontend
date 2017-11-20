@@ -1,17 +1,19 @@
 .main {
 	position: relative;
 	height: 100%;
-	min-height: 700px;
-	overflow: hidden;
+	min-height: 1060px;
+	//overflow: hidden;
 	//background: $dark;
 	background: url(../img/bg.jpg) no-repeat right top $dark;
-	background-size: 100% auto;
+	background-size: auto 100%;
+	margin-bottom: 140px;
 
 	.video_bg {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 100%;
+		//width: 100%;
+		height: 100%;
 	}
 
 	.fade {
@@ -40,73 +42,22 @@
 	.logo {
 		width: 312px;
 		margin-bottom: 30px;
-		margin-top: 40px;
+		margin-top: 160px;
 		transition: all 1s;
+	}
+
+	.cio {
+		position: absolute;
+		top: 150px;
+		right: 20px;
+		transition: opacity 1s;
 	}
 
 	.rated {
 		position: absolute;
 		right: 20px;
-		top: 170px;
+		top: 284px;
 		transition: all 1s cubic-bezier(.35,.69,.51,1.26);
-	}
-
-	/* .bottom {
-		position: absolute;
-		width: 100%;
-		height: 110px;
-		bottom: -110px;
-		background: url(../img/main_bg_bottom.png) no-repeat center top;
-		background-size: 100%;
-		z-index: 1;
-		transition: background .3s, visibility .3s;
-
-		&.hide {
-			background-position: 0 -110px;
-			visibility: hidden;
-		}
-	} */
-
-	.header {
-		padding: 50px 0;
-
-		.hamburger {
-			position: relative;
-			width: 36px;
-			height: 24px;
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 100px;
-			cursor: pointer;
-			display: none;
-			
-			& > div {
-				position: absolute;
-				width: 100%;
-				height: 4px;
-				background: #fff;
-				border-radius: 4px;
-				transition: all .3s;
-			}
-
-			&:hover > div {
-				background: $blue;
-			}
-
-			&:active > div {
-				transition: none;
-				background: $orange;
-			}
-
-			.s2 {
-				top: 50%;
-				margin-top: -2px;
-			}
-
-			.s3 {
-				bottom: 0;
-			}
-		}
 	}
 
 	.text_block {
@@ -115,7 +66,7 @@
 		max-width: 500px;
 		color: #fff;
 		text-transform: uppercase;
-		padding: 20px 0;
+		padding: 30px 0;
 		transition: all 1s;
 
 		&-first {
@@ -131,75 +82,6 @@
 			color: $green;
 			font-size: 24px;
 		}
-	}
-
-	.right_block {
-		float: right;
-		transition: all 1s;
-
-		.enter {
-			display: inline-block;
-			color: #fff;
-			font-size: 18px;
-			margin-right: 40px;
-			vertical-align: middle;
-
-			.login, .register {
-				color: #fff;
-				text-decoration: none;
-				margin: 0 10px;
-
-				&:hover {
-					text-decoration: underline;
-				}
-
-				&:active {
-					color: $orange;
-				}
-			}
-		}
-
-		.lang {
-			position: relative;
-			display: inline-block;
-			cursor: pointer;
-
-			&:hover .items {
-				visibility: visible;
-				opacity: 1;
-			}
-
-			.items {
-				position: absolute;
-				top: 0;
-				border-radius: 12px;
-				overflow: hidden;
-				visibility: hidden;
-				opacity: 0;
-				transition: all .3s;
-			}
-
-			.item {
-				display: block;
-				background: #fff;
-				font-size: 18px;
-				color: $dark;
-				text-decoration: none;
-				padding: 8px 12px;
-				transition: all .3s;
-				
-				&:hover {
-					background: $blue;
-					color: #fff;
-				}
-				&:active {
-					transition: none;
-					background: $orange;
-				}
-			}
-		}
-		
-
 	}
 
 	.discount {
@@ -219,156 +101,65 @@
 	}
 
 	.buttons {
-		position: absolute;
-		width: 100%;
-		left: 0;
-		padding: 0 20px;
-		box-sizing: border-box;
-		bottom: 40px;
-		@extend %justify;
-
+		position: relative;
+		text-align: center;
+		margin-top: 50px;
 		.button {
-			text-align: center;
+			font-size: 20px;
 			&.delay {
 				transition: all 1s cubic-bezier(.35,.69,.51,1.26);
 			}
 		}
 	}
-}
 
-.soc {
-	display: inline-block;
-	vertical-align: middle;
+	.soc {
+		margin-top: 60px;
+		text-align: center;
+	}
 
-	.tel {	
+	.events {
 		position: relative;
-		display: inline-block;
-		width: 79px;
-		height: 28px;
-		margin-right: 27px;
-		vertical-align: middle;
-		border-radius: 20px;
-		border: 1px solid transparent;
-		transition: all .3s, transform .5s cubic-bezier(.35,.69,.51,1.26);
+		text-align: center;
+		margin-top: 60px;
+		transition: opacity 1s;
 
-		font-size: 12px;
-		color: $dark;
-		text-decoration: none;
-		line-height: 28px;
-
-		&.delay {
-			transition-delay: 1.5s;
-		}
-
-		.btn_bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: url(../img/icons/soc/tel.png) no-repeat center;
-			background-size: 79px 28px;
-		}
-
-		.txt {
-			position: relative;
-			padding-left: 30px;
-		}
-
-		&:hover {
-			background: #fff;
-			border-color: #fff;
+		.headline {
+			font-size: 26px;
 			color: #fff;
+			margin-bottom: 60px;
 		}
+		
+		.event {
+			position: relative;
+			display: inline-block;
+			width: 474px;
+			height: 274px;
+			border-radius: 10px;
+			border: 1px solid $blue;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center top;
+			margin: 0 40px;
 
-		&:active {
-			transition: none;
-			border-color: $orange;
-			background: $orange;
-			color: $orange;
-		}
-	}
+			.title {
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				font-size: 24px;
+				line-height: 35px;
+				color: #fff;
+				text-align: center;
+			}
 
-	.soc_btn {
-		display: inline-block;
-		width: 28px;
-		height: 28px;
-		margin-right: 27px;
-		background-repeat: no-repeat;
-		background-size: 100%;
-		vertical-align: middle;
-		border-radius: 100%;
-		transition: all .3s;
-		border: 1px solid transparent;
-
-		&:hover {
-			background-color: $blue;
-			border-color: $blue;
-			transform: scale(1.1);
-		}
-
-		&:active {
-			transition: none;
-			background-color: $orange;
-			border-color: $orange;
-		}
-
-		&.blue:hover {
-			background-color: #fff;
-			border-color: #fff;
-		}
-
-		&.blue:active {
-			background-color: $orange;
-			border-color: $orange;
-		}
-
-		&.in {
-			background-image: url(../img/icons/soc/in.png);
-			&.delay {transition-delay: 2s;}
-		}
-		&.m {
-			background-image: url(../img/icons/soc/m.png);
-			&.delay {transition-delay: 2.1s;}
-		}
-		&.f {
-			background-image: url(../img/icons/soc/f.png);
-			&.delay {transition-delay: 2.2s;}
-		}
-		&.t {
-			background-image: url(../img/icons/soc/t.png);
-			&.delay {transition-delay: 2.3s;}
-		}
-		&.r {
-			background-image: url(../img/icons/soc/r.png);
-			&.delay {transition-delay: 2.4s;}
-		}
-		&.b {
-			background-image: url(../img/icons/soc/b.png);
-			&.delay {transition-delay: 2.5s;}
-		}
-
-		&.in.blue {
-			background-image: url(../img/icons/soc/in_b.png);
-		}
-		&.m.blue {
-			background-image: url(../img/icons/soc/m_b.png);
-		}
-		&.f.blue {
-			background-image: url(../img/icons/soc/f_b.png);
-		}
-		&.t.blue {
-			background-image: url(../img/icons/soc/t_b.png);
-		}
-		&.r.blue {
-			background-image: url(../img/icons/soc/r_b.png);
-		}
-		&.b.blue {
-			background-image: url(../img/icons/soc/b_b.png);
+			&.event1 {
+				background-image: url(../img/events/event1.png);
+			}
+			&.event2 {
+				background-image: url(../img/events/event2.png);
+			}
 		}
 	}
 }
-
 
 
 .main.hide {
@@ -376,15 +167,15 @@
 		opacity: 0;
 		transform: translateY(-20px);
 	}
+	.cio {
+		opacity: 0;
+	}
 	.rated {
 		transform: scaleX(0) skew(-30deg);
 	}
 	.text_block {
 		opacity: 0;
 		transform: translateY(-20px);
-	}
-	.right_block {
-		transform: translateY(-200px);
 	}
 
 	.soc {
@@ -410,6 +201,10 @@
 		opacity: 0;
 		transform: scale(.4);
 	}
+
+	.events {
+		opacity: 0;
+	}
 }
 
 
@@ -428,6 +223,7 @@
 	.main {
 		height: auto;
 		background-position: center;
+		margin-bottom: 0;
 		.video_bg {
 			display: none;
 		}
@@ -441,7 +237,15 @@
 
 		.logo {
 			width: 274px;
-			margin: 40px 0;
+			margin: 0 0 40px 0;
+		}
+
+		.cio {
+			display: block;
+			position: relative;
+			top: auto;
+			right: auto;
+			margin-bottom: 20px;
 		}
 
 		.rated {
@@ -452,27 +256,17 @@
 			margin-bottom: 20px;
 		}
 
-		.header {
-			padding: 20px 0;
-		}
-
-		.right_block {
-			float: none;
-			position: absolute;
-			top: 16px;
-			right: 20px;
-
-			.enter {
-				font-size: 16px;
-				margin-right: 0;
-			}
-		}
-
 		.discount {
 			position: relative;
 			bottom: auto;
 			text-align: left;
 			margin: 40px 0;
+		}
+
+		.soc {
+			.soc_btn {
+				margin: 0 3px;
+			}
 		}
 
 		.buttons {
@@ -484,27 +278,29 @@
 				margin-bottom: 20px;
 			}
 		}
-	}
 
-	.soc {
-		display: block;
-		width: auto;
-		text-align: justify;
-		margin-top: 20px;
+		.events {
+			position: relative;
+			text-align: center;
+			margin-top: 40px;
+			overflow: hidden;
 
-		&:after {
-			content: "";
-			width: 100%;
-			visibility: hidden;
-			display: inline-block;
-		}
+			.headline {
+				font-size: 22px;
+				margin-bottom: 20px;
+			}
+			
+			.event {
+				width: 278px;
+				height: 174px;
+				margin-bottom: 20px;
+				background-size: 100%;
+				margin: 0 0 20px 0;
 
-		.tel {
-			margin-right: 0;
-		}
-		
-		.soc_btn {
-			margin: 0;
+				.title {
+					font-size: 17px;
+				}
+			}
 		}
 	}
 }

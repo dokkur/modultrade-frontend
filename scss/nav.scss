@@ -1,0 +1,176 @@
+.nav {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	padding: 4px 0;
+	z-index: 100;
+
+	&.fix {
+		position: fixed;
+		top: 0;
+		background: $dark;
+	}
+
+	.container {
+		width: 1280px;
+		margin: auto;
+	}
+
+	.links {
+		display: inline-block;
+	}
+
+	.a {
+		font-size: 18px;
+		color: #fff;
+		text-decoration: none;
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+		transition: color .2s;
+		padding: 4px 0;
+		border-bottom: 1px solid transparent;
+
+		&.active {
+			border-color: #fff;
+			cursor: default;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+
+		&:hover {
+			color: $blue;
+		}
+		&:active {
+			color: $orange;
+			transition: none;
+		}
+	}
+
+	.wp_button {
+		display: inline-block;
+		font-size: 11px;
+		height: 28px;
+		line-height: 28px;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 20px;
+		border: 1px solid #fff;
+		padding: 0 12px;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-right: 45px;
+		transition: all .3s;
+		cursor: pointer;
+
+		&:hover {
+			background: $green;
+			border-color: $green;
+		}
+
+		&:active {
+			background: $orange;
+			border-color: $orange;
+			transition: none;
+		}
+	}
+
+	.right_block {
+		float: right;
+		.enter {
+			display: inline-block;
+			color: #fff;
+			font-size: 18px;
+			margin-right: 40px;
+			vertical-align: middle;
+
+			.login, .register {
+				color: #fff;
+				text-decoration: none;
+				margin: 0 10px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:active {
+					color: $orange;
+				}
+			}
+		}
+
+		.lang {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+
+			&:hover .items {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			.items {
+				position: absolute;
+				top: 0;
+				border-radius: 12px;
+				overflow: hidden;
+				visibility: hidden;
+				opacity: 0;
+				transition: all .3s;
+			}
+
+			.item {
+				display: block;
+				background: #fff;
+				font-size: 18px;
+				color: $dark;
+				text-decoration: none;
+				padding: 8px 12px;
+				transition: all .3s;
+				
+				&:hover {
+					background: $blue;
+					color: #fff;
+				}
+				&:active {
+					transition: none;
+					background: $orange;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $tablet) {
+.nav {
+	position: relative;
+	top: 0px;
+
+	&.fix {
+		position: relative;
+		background: none;
+		top: 0px;
+	}
+
+	.wp_button {
+		margin: 10px 0;
+	}
+
+	.links {
+		display: block;
+	}
+
+	.right_block {
+		float: none;
+		margin-left: -10px;
+
+		.enter {
+			font-size: 16px;
+			margin-right: 0;
+		}
+	}
+}
+}

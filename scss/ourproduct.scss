@@ -1,5 +1,5 @@
 .ourproduct {
-	padding-bottom: 50px;
+	padding-bottom: 90px;
 	.container {
 		max-width: 1205px;
 	}
@@ -178,7 +178,6 @@
 		.btn {
 			display: inline-block;
 			width: 320px;
-			//height: 94px;
 			border: 2px solid $dark;
 			border-radius: 10px;
 			box-sizing: border-box;
@@ -195,37 +194,30 @@
 			&.green {
 				color: $green;
 				border-color: $green;
-
-				&:hover {
-					color: #fff;
-					background: $green;
-				}
 			}
 			&.blue {
 				color: $blue;
 				border-color: $blue;
-				&:hover {
-					color: #fff;
-					background: $blue;
-				}
-			}
-
-			&.dark {
-				&:hover {
-					color: #fff;
-					background: $dark;
-				}
-			}
-
-			&:active {
-				transition: none;
-				background: $orange !important;
-				border-color: $orange;
 			}
 		}
 
 		.gear {
 			vertical-align: middle;
+		}
+	}
+
+	.buttons {
+		text-align: center;
+		margin-top: 90px;
+
+		.button {
+			width: 400px;
+			padding-right: 0;
+			padding-left: 0; 
+		}
+
+		.button1 {
+			margin-right: 200px;
 		}
 	}
 }
@@ -341,6 +333,17 @@
 				left: 49%;
 				height: 75px;
 				border-left: 2px dashed $blue;
+			}
+		}
+
+		.buttons {
+			
+			.button {
+				width: 280px;
+			}
+
+			.button1 {
+				margin: 0 0 20px 0;
 			}
 		}
 	}
