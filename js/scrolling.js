@@ -28,11 +28,16 @@ function scrolling() {
 	var nav_media = $('.nav_media');
 	var nav_qa = $('.nav_qa');
 
+	var top_btn = $('.top_btn');
+
 	function scrollAction() {
 		s = $(window).scrollTop();
 
 		if (s+gap > ourproduct.offset().top) {
 			navActive(nav_about);
+			top_btn.removeClass('hide');
+		} else {
+			top_btn.addClass('hide');
 		}
 
 		if (s+gap > participate.offset().top) {
@@ -169,6 +174,11 @@ function scrolling() {
 
 	$('.nav .a').click(function() {
 		$('html,body').stop().animate( { scrollTop: $($(this).attr('href')).offset().top }, 500 );
+		return false;
+	});
+
+	top_btn.click(function() {
+		$('html,body').stop().animate( { scrollTop: 0 }, 500 );
 		return false;
 	});
 
