@@ -1,5 +1,5 @@
 function initSupporters() {
-    supporters('#supportersBlock');
+    supporters('#partners');
     supporters('#mediaBlock');
 }
 
