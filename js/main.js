@@ -10,4 +10,8 @@ function main() {
 	setTimeout(function() {
 		$('.main .buttons .button').removeClass('delay delay3 delay35 delay4');
 	}, 6000);
+
+	$('.lang .small_btn').click(function() {
+		return false;
+	});
 }
