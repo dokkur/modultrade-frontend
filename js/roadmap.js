@@ -11,14 +11,19 @@ function roadmap() {
 function scheme() {
 	var canvas, stage, canva;
 	canvas = document.getElementById("roadmap_canvas");
+	var comp=AdobeAn.getComposition("B22544534C90461992B482D2E56E8622");
+	var scheme=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var scheme=comp.getLibrary();
 	loader.loadManifest(scheme.properties.manifest);
-	function handleFileLoad(evt) {
-		if (evt.item.type == "image") { img_scheme[evt.item.id] = evt.result; }
+	function handleFileLoad(evt, comp) {
+		var img_scheme=comp.getImages();	
+		if (evt && (evt.item.type == "image")) { img_scheme[evt.item.id] = evt.result; }
 	}
-	function handleComplete(evt) {
+	function handleComplete(evt, comp) {
+		var scheme=comp.getLibrary();
 		canva = new scheme.scheme();
 		stage = new createjs.Stage(canvas);
 		stage.addChild(canva);
