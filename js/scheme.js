@@ -99,7 +99,7 @@ p.nominalBounds = new cjs.Rectangle(-43,-26.5,86.1,53);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
-	this.text = new cjs.Text("March\n2016", "20px 'Lato'", "#B7B6B6");
+	this.text = new cjs.Text("March\n2017", "20px 'Lato'", "#B7B6B6");
 	this.text.textAlign = "center";
 	this.text.lineHeight = 24;
 	this.text.lineWidth = 82;
