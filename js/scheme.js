@@ -1,70 +1,10 @@
-(function (lib, img, cjs, ss, an) {
+(function (cjs, an) {
 
 var p; // shortcut to reference prototypes
-lib.webFontTxtInst = {}; 
-var loadedTypekitCount = 0;
-var loadedGoogleCount = 0;
-var gFontsUpdateCacheList = [];
-var tFontsUpdateCacheList = [];
+var lib={};var ss={};var img={};
 lib.ssMetadata = [];
 
 
-
-lib.updateListCache = function (cacheList) {		
-	for(var i = 0; i < cacheList.length; i++) {		
-		if(cacheList[i].cacheCanvas)		
-			cacheList[i].updateCache();		
-	}		
-};		
-
-lib.addElementsToCache = function (textInst, cacheList) {		
-	var cur = textInst;		
-	while(cur != exportRoot) {		
-		if(cacheList.indexOf(cur) != -1)		
-			break;		
-		cur = cur.parent;		
-	}		
-	if(cur != exportRoot) {		
-		var cur2 = textInst;		
-		var index = cacheList.indexOf(cur);		
-		while(cur2 != cur) {		
-			cacheList.splice(index, 0, cur2);		
-			cur2 = cur2.parent;		
-			index++;		
-		}		
-	}		
-	else {		
-		cur = textInst;		
-		while(cur != exportRoot) {		
-			cacheList.push(cur);		
-			cur = cur.parent;		
-		}		
-	}		
-};		
-
-lib.gfontAvailable = function(family, totalGoogleCount) {		
-	lib.properties.webfonts[family] = true;		
-	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
-	for(var f = 0; f < txtInst.length; ++f)		
-		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
-
-	loadedGoogleCount++;		
-	if(loadedGoogleCount == totalGoogleCount) {		
-		lib.updateListCache(gFontsUpdateCacheList);		
-	}		
-};		
-
-lib.tfontAvailable = function(family, totalTypekitCount) {		
-	lib.properties.webfonts[family] = true;		
-	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
-	for(var f = 0; f < txtInst.length; ++f)		
-		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
-
-	loadedTypekitCount++;		
-	if(loadedTypekitCount == totalTypekitCount) {		
-		lib.updateListCache(tFontsUpdateCacheList);		
-	}		
-};
 // symbols:
 
 
@@ -142,7 +82,7 @@ p.nominalBounds = new cjs.Rectangle(-43,-26.5,86.1,53);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
-	this.text = new cjs.Text("April\n2016", "20px 'Lato'", "#B7B6B6");
+	this.text = new cjs.Text("April\n2017", "20px 'Lato'", "#B7B6B6");
 	this.text.textAlign = "center";
 	this.text.lineHeight = 24;
 	this.text.lineWidth = 82;
@@ -159,7 +99,7 @@ p.nominalBounds = new cjs.Rectangle(-43,-26.5,86.1,53);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
-	this.text = new cjs.Text("March\n2016", "20px 'Lato'", "#B7B6B6");
+	this.text = new cjs.Text("March\n2017", "20px 'Lato'", "#B7B6B6");
 	this.text.textAlign = "center";
 	this.text.lineHeight = 24;
 	this.text.lineWidth = 82;
@@ -652,7 +592,7 @@ p.nominalBounds = new cjs.Rectangle(-68.2,-36.4,136.5,72.8);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
-	this.text = new cjs.Text("WHITE PAPER\nPROTOTUPE", "bold 24px 'Lato'", "#1A97D5");
+	this.text = new cjs.Text("WHITE PAPER\nPROTOTYPE", "bold 24px 'Lato'", "#1A97D5");
 	this.text.lineHeight = 31;
 	this.text.lineWidth = 216;
 	this.text.parent = this;
@@ -2066,22 +2006,27 @@ p.nominalBounds = null;
 
 	// lb
 	this.lb5 = new lib.lb();
+	this.lb5.name = "lb5";
 	this.lb5.parent = this;
 	this.lb5.setTransform(656,575.5,1,1,0,0,0,0,18.5);
 
 	this.lb4 = new lib.lb();
+	this.lb4.name = "lb4";
 	this.lb4.parent = this;
 	this.lb4.setTransform(518,575.5,1,1,0,0,0,0,18.5);
 
 	this.lb3 = new lib.lb();
+	this.lb3.name = "lb3";
 	this.lb3.parent = this;
 	this.lb3.setTransform(272,575.5,1,1,0,0,0,0,18.5);
 
 	this.lb2 = new lib.lb();
+	this.lb2.name = "lb2";
 	this.lb2.parent = this;
 	this.lb2.setTransform(150,575.5,1,1,0,0,0,0,18.5);
 
 	this.lb1 = new lib.lb();
+	this.lb1.name = "lb1";
 	this.lb1.parent = this;
 	this.lb1.setTransform(35,575.5,1,1,0,0,0,0,18.5);
 
@@ -2089,22 +2034,27 @@ p.nominalBounds = null;
 
 	// tb
 	this.tb5 = new lib.tb5();
+	this.tb5.name = "tb5";
 	this.tb5.parent = this;
 	this.tb5.setTransform(656,623,1,1,0,0,0,43,26.5);
 
 	this.tb4 = new lib.tb4();
+	this.tb4.name = "tb4";
 	this.tb4.parent = this;
 	this.tb4.setTransform(519,623,1,1,0,0,0,43,26.5);
 
 	this.tb3 = new lib.tb3();
+	this.tb3.name = "tb3";
 	this.tb3.parent = this;
 	this.tb3.setTransform(272,623,1,1,0,0,0,43,26.5);
 
 	this.tb2 = new lib.tb2();
+	this.tb2.name = "tb2";
 	this.tb2.parent = this;
 	this.tb2.setTransform(149,623,1,1,0,0,0,43,26.5);
 
 	this.tb1 = new lib.tb1();
+	this.tb1.name = "tb1";
 	this.tb1.parent = this;
 	this.tb1.setTransform(39,622.5,1,1,0,0,0,43,26.5);
 
@@ -2112,62 +2062,77 @@ p.nominalBounds = null;
 
 	// Titles
 	this.t12 = new lib.t12();
+	this.t12.name = "t12";
 	this.t12.parent = this;
 	this.t12.setTransform(969.2,24.8,1,1,0,0,0,68.2,12.8);
 
 	this.t10 = new lib.t10();
+	this.t10.name = "t10";
 	this.t10.parent = this;
 	this.t10.setTransform(775.2,93.8,1,1,0,0,0,68.2,12.8);
 
 	this.t8 = new lib.t8();
+	this.t8.name = "t8";
 	this.t8.parent = this;
 	this.t8.setTransform(679.2,184.8,1,1,0,0,0,68.2,12.8);
 
 	this.l12 = new lib.l12();
+	this.l12.name = "l12";
 	this.l12.parent = this;
 	this.l12.setTransform(1069.2,30.9,1,1,0,0,0,25.4,0);
 
 	this.l10 = new lib.l10();
+	this.l10.name = "l10";
 	this.l10.parent = this;
 	this.l10.setTransform(909.2,103.4,1,1,0,0,0,53.9,0);
 
 	this.l8 = new lib.l8();
+	this.l8.name = "l8";
 	this.l8.parent = this;
 	this.l8.setTransform(808.4,191.3,1,1,0,0,0,53.9,0);
 
 	this.t11 = new lib.t11();
+	this.t11.name = "t11";
 	this.t11.parent = this;
 	this.t11.setTransform(1066.1,455,1,1,0,0,0,71.1,37);
 
 	this.t9 = new lib.t9();
+	this.t9.name = "t9";
 	this.t9.parent = this;
 	this.t9.setTransform(945.1,455,1,1,0,0,0,71.1,37);
 
 	this.t7 = new lib.t7();
+	this.t7.name = "t7";
 	this.t7.parent = this;
 	this.t7.setTransform(804.1,455,1,1,0,0,0,71.1,37);
 
 	this.t6 = new lib.t6();
+	this.t6.name = "t6";
 	this.t6.parent = this;
 	this.t6.setTransform(655.1,455,1,1,0,0,0,71.1,37);
 
 	this.t5 = new lib.t5();
+	this.t5.name = "t5";
 	this.t5.parent = this;
 	this.t5.setTransform(520.2,454,1,1,0,0,0,68.2,36.4);
 
 	this.t4 = new lib.t4();
+	this.t4.name = "t4";
 	this.t4.parent = this;
 	this.t4.setTransform(394.2,454.4,1,1,0,0,0,68.2,36.4);
 
 	this.t3 = new lib.t3();
+	this.t3.name = "t3";
 	this.t3.parent = this;
 	this.t3.setTransform(274.2,447.4,1,1,0,0,0,68.2,29.4);
 
 	this.t2 = new lib.t2();
+	this.t2.name = "t2";
 	this.t2.parent = this;
 	this.t2.setTransform(151.2,508.4,1,1,0,0,0,68.2,36.4);
 
 	this.t1 = new lib.t1();
+	this.t1.name = "t1";
 	this.t1.parent = this;
 	this.t1.setTransform(34,484.8,1,1,0,0,0,29,12.8);
 
@@ -2175,38 +2140,47 @@ p.nominalBounds = null;
 
 	// Lines
 	this.l9 = new lib.l9();
+	this.l9.name = "l9";
 	this.l9.parent = this;
 	this.l9.setTransform(946,322.1,1,1,0,0,0,0,85);
 
 	this.l11 = new lib.l11();
+	this.l11.name = "l11";
 	this.l11.parent = this;
 	this.l11.setTransform(1061,301.5,1,1,0,0,0,0,104.5);
 
 	this.l7 = new lib.l7();
+	this.l7.name = "l7";
 	this.l7.parent = this;
 	this.l7.setTransform(800,348.8,1,1,0,0,0,0,56.8);
 
 	this.l6 = new lib.l6();
+	this.l6.name = "l6";
 	this.l6.parent = this;
 	this.l6.setTransform(656,348.8,1,1,0,0,0,0,56.8);
 
 	this.l5 = new lib.l5();
+	this.l5.name = "l5";
 	this.l5.parent = this;
 	this.l5.setTransform(518,348.8,1,1,0,0,0,0,56.8);
 
 	this.l4 = new lib.l4();
+	this.l4.name = "l4";
 	this.l4.parent = this;
 	this.l4.setTransform(395,348.8,1,1,0,0,0,0,56.8);
 
 	this.l3 = new lib.l3();
+	this.l3.name = "l3";
 	this.l3.parent = this;
 	this.l3.setTransform(272,348.8,1,1,0,0,0,0,56.8);
 
 	this.l2 = new lib.l2();
+	this.l2.name = "l2";
 	this.l2.parent = this;
 	this.l2.setTransform(150,405.7,1,1,0,0,0,0,68.7);
 
 	this.l1 = new lib.l1();
+	this.l1.name = "l1";
 	this.l1.parent = this;
 	this.l1.setTransform(35,431.5,1,1,0,0,0,0,43.5);
 
@@ -2214,50 +2188,62 @@ p.nominalBounds = null;
 
 	// gears
 	this.g12 = new lib.gear12();
+	this.g12.name = "g12";
 	this.g12.parent = this;
 	this.g12.setTransform(1094,31.4,0.66,0.66,0,0,0,41.2,41.4);
 
 	this.g10 = new lib.gear3();
+	this.g10.name = "g10";
 	this.g10.parent = this;
 	this.g10.setTransform(962.9,103.1,0.66,0.66,0,0,0,41.2,41.4);
 
 	this.g8 = new lib.gear3();
+	this.g8.name = "g8";
 	this.g8.parent = this;
 	this.g8.setTransform(862.2,191.3,0.66,0.66,0,0,0,41.2,41.4);
 
 	this.g11 = new lib.gear3();
+	this.g11.name = "g11";
 	this.g11.parent = this;
 	this.g11.setTransform(1061.2,196.7,0.836,0.836,0,0,0,41.2,41.2);
 
 	this.g9 = new lib.gear3();
+	this.g9.name = "g9";
 	this.g9.parent = this;
 	this.g9.setTransform(945.9,237.2,0.836,0.836,0,0,0,41.2,41.2);
 
 	this.g7 = new lib.gear2();
+	this.g7.name = "g7";
 	this.g7.parent = this;
 	this.g7.setTransform(800.1,291.2,0.836,0.836,0,0,0,41.2,41.2);
 
 	this.g6 = new lib.gear2();
+	this.g6.name = "g6";
 	this.g6.parent = this;
 	this.g6.setTransform(656,291.3,0.661,0.661,0,0,0,41.2,41.3);
 
 	this.g5 = new lib.gear2();
+	this.g5.name = "g5";
 	this.g5.parent = this;
 	this.g5.setTransform(517.5,291.2,0.836,0.836,0,0,0,41.2,41.2);
 
 	this.g4 = new lib.gear2();
+	this.g4.name = "g4";
 	this.g4.parent = this;
 	this.g4.setTransform(394.9,291.3,0.661,0.661,0,0,0,41.2,41.3);
 
 	this.g3 = new lib.gear1();
+	this.g3.name = "g3";
 	this.g3.parent = this;
 	this.g3.setTransform(272.2,291.2,0.836,0.836,0,0,0,41.2,41.2);
 
 	this.g2 = new lib.gear1();
+	this.g2.name = "g2";
 	this.g2.parent = this;
 	this.g2.setTransform(150,337.4,0.657,0.657,0,0,0,41.1,41.1);
 
 	this.g1 = new lib.gear0();
+	this.g1.name = "g1";
 	this.g1.parent = this;
 	this.g1.setTransform(35,388.1,0.829,0.829,0,0,0,41,41.1);
 
@@ -2265,6 +2251,7 @@ p.nominalBounds = null;
 
 	// top
 	this.top = new lib.Top();
+	this.top.name = "top";
 	this.top.parent = this;
 	this.top.setTransform(490.2,176.3,1,1,0,0,0,455.2,162.3);
 	this.top._off = true;
@@ -2273,6 +2260,7 @@ p.nominalBounds = null;
 
 	// bottom
 	this.bottom = new lib.Bottom();
+	this.bottom.name = "bottom";
 	this.bottom.parent = this;
 	this.bottom.setTransform(1028.5,566.1,1,1,0,0,0,83.5,82);
 	this.bottom._off = true;
@@ -2281,6 +2269,7 @@ p.nominalBounds = null;
 
 	// fade2
 	this.fade2 = new lib.fade2();
+	this.fade2.name = "fade2";
 	this.fade2.parent = this;
 	this.fade2.setTransform(1057.2,103.9,0.148,0.196,0,0,0,561.2,325.1);
 	this.fade2._off = true;
@@ -2289,6 +2278,7 @@ p.nominalBounds = null;
 
 	// fade
 	this.fade = new lib.fade();
+	this.fade.name = "fade";
 	this.fade.parent = this;
 	this.fade.setTransform(561,325,1,1,0,0,0,561,325);
 	this.fade._off = true;
@@ -2307,12 +2297,12 @@ p.nominalBounds = null;
 p.nominalBounds = null;
 // library properties:
 lib.properties = {
+	id: 'B22544534C90461992B482D2E56E8622',
 	width: 1122,
 	height: 650,
 	fps: 60,
 	color: "#FFFFFF",
 	opacity: 1.00,
-	webfonts: {},
 	manifest: [
 		{src:"img/scheme/lines.png", id:"lines"}
 	],
@@ -2321,6 +2311,56 @@ lib.properties = {
 
 
 
+// bootstrap callback support:
 
-})(scheme = scheme||{}, img_scheme = img_scheme||{}, createjs = createjs||{}, ss = ss||{}, AdobeAn = AdobeAn||{});
-var scheme, img_scheme, createjs, ss, AdobeAn;
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+
+an.compositions = an.compositions || {};
+an.compositions['B22544534C90461992B482D2E56E8622'] = {
+	getStage: function() { return exportRoot.getStage(); },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+
+
+
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
