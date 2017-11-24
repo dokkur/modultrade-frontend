@@ -105,6 +105,7 @@ h1 {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
+	text-decoration: none;
 	
 	.play {
 		position: absolute;
@@ -123,19 +124,24 @@ h1 {
 		&.green {
 			background-color: $green;
 		}
-
-		&:hover {
-			background-color: $blue;
-		}
-		&:active {
-			transition: none;
-			background-color: $orange;
-		}
 	}
 
 	.button {
 		height: 72px;
 		padding-right: 60px !important;
+	}
+
+	&:hover {
+		.button, .play {
+			background-color: $blue;
+		}
+	}
+
+	&:active {
+		.button, .play {
+			transition: none;
+			background-color: $orange;
+		}
 	}
 }
 
