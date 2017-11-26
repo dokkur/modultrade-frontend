@@ -16,8 +16,6 @@ function scrolling() {
 	var supporters = $('.supporters'), supporters$ = false;
 	var subscribe_block = $('.subscribe_block'), subscribe_block$ = false;
 	var footer = $('.footer'), footer$ = false;
-	var nav = $('.nav');
-	var nav_y = nav.offset().top;
 	var nav_active = $('.nav .a').first();
 
 	var nav_about = $('.nav_about');
@@ -28,16 +26,11 @@ function scrolling() {
 	var nav_media = $('.nav_media');
 	var nav_qa = $('.nav_qa');
 
-	var top_btn = $('.top_btn');
-
 	function scrollAction() {
 		s = $(window).scrollTop();
 
 		if (s+gap > ourproduct.offset().top) {
 			navActive(nav_about);
-			top_btn.removeClass('hide');
-		} else {
-			top_btn.addClass('hide');
 		}
 
 		if (s+gap > participate.offset().top) {
@@ -150,7 +143,7 @@ function scrolling() {
 			}
 		}
 
-		if (s+gap > footer.offset().top) {
+		if (s+gap*2 > footer.offset().top) {
 			navActive(nav_qa);
 			if (!footer$) {
 				footer$ = true;
@@ -162,23 +155,12 @@ function scrolling() {
 				}, 2000);
 			}
 		}
-
-		if (s >= nav_y) {
-			nav.addClass('fix');
-		} else {
-			nav.removeClass('fix');
-		}
 	}
 	$(window).scroll(scrollAction);
 	scrollAction();
 
 	$('.nav .a').click(function() {
 		$('html,body').stop().animate( { scrollTop: $($(this).attr('href')).offset().top }, 500 );
-		return false;
-	});
-
-	top_btn.click(function() {
-		$('html,body').stop().animate( { scrollTop: 0 }, 500 );
 		return false;
 	});
 

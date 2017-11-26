@@ -221,10 +221,37 @@ h1 {
 	}
 }
 
+.header {
+	height: 280px;
+	background: url(../img/bg.jpg) no-repeat center top $dark;
+	background-size: 100%;
+
+	.container {
+		width: 1280px;
+		margin: auto;
+	}
+
+	.logo {
+		margin-top: 140px;
+		width: 350px;
+	}
+}
+
 
 @media (max-width: $tablet) {
 	.container {
 		width: auto !important;
+	}
+
+	.header {
+		height: auto;
+		background-size: cover;
+		.logo {
+			margin-top: 20px;
+			margin-bottom: 40px;
+			width: 280px;
+			border: 0;
+		}
 	}
 
 	.button {
