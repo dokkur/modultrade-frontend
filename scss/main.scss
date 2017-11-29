@@ -46,18 +46,16 @@
 		transition: all 1s;
 	}
 
-	.cio {
+	.rating_block {
 		position: absolute;
+		transition: opacity 1s;
 		top: 150px;
 		right: 20px;
-		transition: opacity 1s;
-	}
 
-	.rated {
-		position: absolute;
-		right: 20px;
-		top: 284px;
-		transition: all 1s cubic-bezier(.35,.69,.51,1.26);
+		.rating {
+			display: block;
+			margin-bottom: 10px;
+		}
 	}
 
 	.text_block {
@@ -167,11 +165,8 @@
 		opacity: 0;
 		transform: translateY(-20px);
 	}
-	.cio {
+	.rating_block {
 		opacity: 0;
-	}
-	.rated {
-		transform: scaleX(0) skew(-30deg);
 	}
 	.text_block {
 		opacity: 0;
@@ -240,19 +235,10 @@
 			margin: 0 0 40px 0;
 		}
 
-		.cio {
-			display: block;
+		.rating_block {
 			position: relative;
 			top: auto;
 			right: auto;
-			margin-bottom: 20px;
-		}
-
-		.rated {
-			display: block;
-			position: relative;
-			right: auto;
-			top: auto;
 			margin-bottom: 20px;
 		}
 
