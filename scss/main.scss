@@ -56,6 +56,14 @@
 			display: block;
 			margin-bottom: 10px;
 		}
+
+		.trackico, .rated {
+			img {
+				border-radius: 10px;
+				border: 1px solid $blue;
+				width: 224px;
+			}
+		}
 	}
 
 	.text_block {
