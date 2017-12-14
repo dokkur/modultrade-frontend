@@ -2,12 +2,12 @@ $(function() {
 	if ($('.main')[0]) {
 		main();
 		countdown();
-		participate();
-		howitworks();
-		team();
+		// participate();
+		// howitworks();
+		// team();
 		roadmap();
-		supporters();
-		brandsScroll();
+		// supporters();
+		// brandsScroll();
 		setTimeout(function() {
 			scrolling();
 		}, 1000);

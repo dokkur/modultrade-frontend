@@ -55,7 +55,7 @@ function n1() {
 	increase1Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(1);
-		}, 1000);
+		}, 800);
 	}
 }
 function n2() {
@@ -71,7 +71,7 @@ function n2() {
 	increase2Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(2);
-		}, 1500);
+		}, 1200);
 	}
 }
 function n3() {
@@ -87,7 +87,7 @@ function n3() {
 	increase3Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(3);
-		}, 2000);
+		}, 1600);
 	}
 }
 
@@ -110,7 +110,7 @@ function n4() {
 	increase4Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(1);
-		}, 1000);
+		}, 800);
 	}
 }
 function n5() {
@@ -126,7 +126,7 @@ function n5() {
 	increase5Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(2);
-		}, 1500);
+		}, 1200);
 	}
 }
 function n6() {
@@ -142,6 +142,6 @@ function n6() {
 	increase6Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(3);
-		}, 2000);
+		}, 1600);
 	}
 }
