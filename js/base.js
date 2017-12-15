@@ -6,7 +6,7 @@ $(function() {
 		// howitworks();
 		// team();
 		roadmap();
-		// supporters();
+		supporters();
 		// brandsScroll();
 		setTimeout(function() {
 			scrolling();

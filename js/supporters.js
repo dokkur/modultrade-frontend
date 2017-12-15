@@ -23,11 +23,13 @@ function supporters(containerSelector) {
     right.click(scrollRight);
 
     function scrollLeft() {
+        console.log('left');
         pos += w;
         scroll();
     }
 
     function scrollRight() {
+        console.log('right');
         if (Math.abs(pos) < maxLeftPosition) {
             pos -= w;
             scroll();
