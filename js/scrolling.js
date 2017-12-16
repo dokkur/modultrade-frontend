@@ -105,11 +105,13 @@ function scrolling() {
             // }
         }
 
-        if (!roadmap$) {
-            roadmap$ = true;
-            roadmap.removeClass('hide');
-            roadmapStart();
-        }
+        setTimeout(function() {
+            if (!roadmap$) {
+                roadmap$ = true;
+                roadmap.removeClass('hide');
+                roadmapStart();
+            }
+        }, 1000);
 
         if (s + gap > increase1.offset().top) {
             if (!increase1$) {

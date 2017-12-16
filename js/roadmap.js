@@ -55,7 +55,7 @@ function n1() {
 	increase1Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(1);
-		}, 800);
+		}, 1000);
 	}
 }
 function n2() {
@@ -110,7 +110,7 @@ function n4() {
 	increase4Start = function() {
 		setTimeout(function() {
 			canva.as.gotoAndStop(1);
-		}, 800);
+		}, 1000);
 	}
 }
 function n5() {
