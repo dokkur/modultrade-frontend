@@ -26,6 +26,8 @@ function scrolling() {
     var nav_media = $('.nav_media');
     var nav_qa = $('.nav_qa');
 
+    window.roadmap_init = false;
+
     function scrollAction() {
         s = $(window).scrollTop();
 
@@ -105,13 +107,15 @@ function scrolling() {
             // }
         }
 
-        setTimeout(function() {
-            if (!roadmap$) {
-                roadmap$ = true;
+        var roadMapInterval = setInterval(function() {
+            if (!window.roadmap_init) {
                 roadmap.removeClass('hide');
                 roadmapStart();
+                if (window.roadmap_init) {
+                    clearInterval(roadMapInterval);
+                }
             }
-        }, 1000);
+        }, 500);
 
         if (s + gap > increase1.offset().top) {
             if (!increase1$) {

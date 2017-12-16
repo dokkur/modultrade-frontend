@@ -34,6 +34,7 @@ function scheme() {
 
 	roadmapStart = function() {
 		if (canva) {
+            window.roadmap_init = true;
 			canva.gotoAndStop(1);
 		}
 		$('.roadmap .b').hover(function() {
